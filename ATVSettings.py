@@ -19,12 +19,12 @@ options = { \
     'showsharedlibraries'        :('True', 'False'), \
     'showplaylists'              :('True', 'False'), \
     'movieview'                  :('Big Artwork', 'Grid', 'List', 'Detailed List'), \
-    'extraview'                  :('Grid'), \
     'movieposters'               :('Show', 'Hide'), \
     'movielayers'                :('Show', 'Hide'), \
     'homevideoview'              :('Grid', 'List', 'Detailed List'), \
     'showview'                   :('Big Artwork', 'Grid', 'List', 'Bookcase'), \
     'channelview'                :('Grid', 'List', 'Tabbed List'), \
+    'movieextras'                :('Show', 'Hide'), \
     'episodeposters'             :('Show', 'Hide'), \
     'showlayers'                 :('Show', 'Hide'), \
     'seasonlayers'               :('Show', 'Hide'), \
