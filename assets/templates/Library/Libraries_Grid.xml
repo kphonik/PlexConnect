@@ -57,12 +57,11 @@
                   {{VAR(sections:NoKey:TRUE)}}  <!--within COPY this sets the var to TRUE-->
                   
                     <title>{{VAL(title)}}</title>
-                    <image>{{IMAGEURL(art::768)}}</image>{{CUT($sectionicons_shared::Apple=|Plex=CUT|Fanart=CUT|Custom=CUT)}}
-                    <image>{{URL(:/templates/plex/images/icons/{{VAL(type)}}.png)}}</image>{{CUT($sectionicons_shared::Apple=CUT|Plex=CUT|Fanart=|Custom=CUT)}}
-                    <image>{{IMAGEURL(thumb::768)}}</image>{{CUT($sectionicons_shared::Apple=CUT|Plex=|Fanart=CUT|Custom=CUT)}}
-                    <defaultImage>resource://16X9.png</defaultImage>
-                    <!--badgeCount></badgeCount-->
-                  </moviePoster>
+                                        <image>{{URL(:/templates/plex/images/icons/{{VAL(type)}}.png)}}</image>{{CUT($sectionicons_all::Plex=CUT|Fanart=)}}
+                                        <image>{{IMAGEURL(thumb::768)}}</image>{{CUT($sectionicons_all::Plex=|Fanart=CUT)}}
+                                        <defaultImage>resource://16X9.png</defaultImage>
+                                        <!--badgeCount></badgeCount-->
+                                    </moviePoster>
                   
                   <!-- search -->
                   <moviePoster id="{{VAL(searchKey)}}" featured="true" alwaysShowTitles="{{VAL($sectionicons::Apple=true|Plex=true|Fanart=true)}}"
