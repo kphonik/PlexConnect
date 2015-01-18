@@ -21,7 +21,7 @@ options = { \
     'movielayers'                :('Show', 'Hide'), \
     'homevideoview'              :('Grid', 'List', 'Detailed List'), \
     'showview'                   :('Big Artwork', 'Grid', 'List', 'Bookcase'), \
-    'movieextras'                :('Show', 'Hide'), \
+    'movie_extras'                :('Show', 'Hide'), \
     'episodeposters'             :('Show', 'Hide'), \
     'showlayers'                 :('Show', 'Hide'), \
     'seasonlayers'               :('Show', 'Hide'), \
@@ -36,7 +36,6 @@ options = { \
     'library_ondeck'             :('checked', 'unchecked'), \
     'library_recentlyadded'      :('checked', 'unchecked'), \
     'library_channels'           :('unchecked', 'checked'), \
-    'librarymerge'               :('False', 'True'), \
     'showtitles_library'         :('Show All', 'Highlighted Only'), \
     'starttab'                   :('Library', 'Shared Libraries', 'Channels'), \
     'actorview'                  :('Movies', 'Portrait'), \

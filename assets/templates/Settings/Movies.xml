@@ -80,9 +80,9 @@
           
           
             <items>
-              <oneLineMenuItem id="MovieExtras" onSelect="toggleSettings('MovieExtras', 'Settings_Movies')">
+              <oneLineMenuItem id="Movie_Extras" onSelect="toggleSettings('Movie_Extras', 'Settings_Movies')">
                 <label>{{TEXT(Movie Extras)}}</label>
-                <rightLabel>{{SETTING(movieextras)}}</rightLabel>
+                <rightLabel>{{SETTING(movie_extras)}}</rightLabel>
               </oneLineMenuItem>
             </items>
           </menuSection>
