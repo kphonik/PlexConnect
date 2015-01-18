@@ -2,7 +2,6 @@
 <atv>
   <head>
     <script src="{{URL(:/js/utils.js)}}" />
-    <script src="{{URL(:/js/handlePlexConnectNavbar.js)}}" />
     <script src="{{URL(:/js/updateXML.js)}}" />
     
   </head>
@@ -20,7 +19,7 @@
         <navigationItem id="Library">
           <title>{{TEXT(Library)}}</title>
           <url>{{URL(:/PMS(owned)/library/sections::PlexConnect=Library_View)}}</url>
-        </navigationItem>{{CUT($libraryview:CUT:=|Hide=CUT|Hide =)}}{{CUT($librariesview::=CUT|Hide=)}}
+        </navigationItem>{{CUT($libraryview:CUT:=|Hide=CUT|Hide =)}}{{CUT($librariesview::Hide=|Grid=CUT|Paged Grid=CUT|List=CUT)}}
         
         <navigationItem id="All Libraries">
           <title>{{TEXT(All Libraries)}}</title>
@@ -35,7 +34,7 @@
         <navigationItem id="SharedLibraries">
           <title>{{TEXT(Shared Libraries)}}</title>
           <url>{{URL(:/PMS(shared)/library/sections::PlexConnect=Library_ViewShared)}}</url>
-        </navigationItem>{{CUT($myplex_auth:CUT:=CUT| =)}}{{CUT($sharedlibrariesview:CUT:=|Hide=CUT|Hide =)}}{{CUT($librariesview::=CUT|Hide=)}}
+        </navigationItem>{{CUT($myplex_auth:CUT:=CUT| =)}}{{CUT($sharedlibrariesview:CUT:=|Hide=CUT|Hide =)}}{{CUT($librariesview::Hide=|Grid=CUT|Paged Grid=CUT|List=CUT)}}
         
         <navigationItem id="Settings">
           <title>{{TEXT(Settings)}}</title>
