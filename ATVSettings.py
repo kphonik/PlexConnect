@@ -11,7 +11,7 @@ from Debug import *  # dprint()
 
 options = { \
     'playlistsview'             :('List', 'Tabbed List', 'Hide'), \
-    'libraryview'               :('Grid', 'Paged Grid', 'List', 'Hide'), \
+    'libraryview'               :('Grid', 'Paged Grid', 'Overview', 'List', 'Hide'), \
     'sharedlibrariesview'       :('Grid', 'Paged Grid', 'List', 'Hide'), \
     'librariesview'             :('Hide', 'Grid', 'Paged Grid', 'List'), \
     'channelview'               :('Grid', 'List', 'Tabbed List', 'Hide'), \
@@ -26,6 +26,7 @@ options = { \
     'showlayers'                 :('Show', 'Hide'), \
     'seasonlayers'               :('Show', 'Hide'), \
     'episodelayers'              :('Show', 'Hide'), \
+    'fanart_blur'               :('0', '5', '10', '15', '20'), \
     'episodeview'                :('List', 'Grid'), \
     'seasonview'                 :('Big Artwork', 'Coverflow', 'List'), \
     'sectionicons'               :('Fanart', 'Plex', 'Custom'), \

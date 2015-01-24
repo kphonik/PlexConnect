@@ -1,9 +1,15 @@
+#!/usr/bin/env python
+
 import re
 import sys
-import math 
-import ntpath
+import io
 import urllib
 import urllib2
+import urlparse
+import posixpath
+import math
+import ntpath
+
 
 
 import ConfigParser
@@ -337,3 +343,6 @@ def remove_junk(url):
     temp = temp.split('?')[0]
     temp = temp.split('&')[0]
     return temp
+    
+
+

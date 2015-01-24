@@ -287,7 +287,16 @@ def XML_PMS2aTV(PMS_address, path, options):
         parts = cmd.split('_', 1)
         dir = parts[0]
         cmd = parts[1]
-            
+    
+    # Overview case scanners
+    if cmd.find('Overview') != -1:
+        dprint(__name__, 0, "Overview scanner found, updating command.")
+        parts = cmd.split('_')
+        dir = parts[0].replace('Series', 'TVShow')
+        dir = dir.replace('Video', 'HomeVideo')
+        dir = dir.replace('iTunes', 'Music')
+        cmd = 'Overview'
+    
     # Special case scanners
     if cmd.find('Scanner') != -1:
         dprint(__name__, 0, "Section scanner found, updating command.")
@@ -1328,6 +1337,40 @@ class CCommandCollection(CCommandHelper):
         import PILBackgrounds
         conf = PILBackgrounds.ImageBackground(eval(param))
         res = conf.generate()
+        return res
+
+    def ATTRIB_BACKGROUNDURL(self, src, srcXML, param):
+        key, leftover, dfltd = self.getKey(src, srcXML, param)
+        gradientTemplate, leftover = self.getParam(src, leftover)
+        titleText, leftover = self.getParam(src, leftover)
+        subtitleText, leftover = self.getParam(src, leftover)
+        titleSize, leftover = self.getParam(src, leftover)
+        subtitleSize, leftover = self.getParam(src, leftover)
+        textColor, leftover = self.getParam(src, leftover)
+        align, leftover = self.getParam(src, leftover)
+        valign, leftover = self.getParam(src, leftover)
+        offsetx, leftover = self.getParam(src, leftover)
+        offsety, leftover = self.getParam(src, leftover)
+        lineheight, leftover = self.getParam(src, leftover)
+        blurStart, leftover = self.getParam(src, leftover)
+        blurEnd, leftover = self.getParam(src, leftover)
+        statusText, leftover = self.getParam(src, leftover)
+
+
+        if key.startswith('/'):  # internal full path.
+            key = self.PMS_baseURL + key
+        elif key.startswith('http://') or key.startswith('https://'):  # external address
+            pass
+        else:  # internal path, add-on
+            key = self.PMS_baseURL + self.path[srcXML] + key
+        
+        auth_token = PlexAPI.getPMSProperty(self.ATV_udid, self.PMS_uuid, 'accesstoken')
+        
+        dprint(__name__, 0, "Background (Source): {0}", key)
+        res = g_param['baseURL']  # base address to PlexConnect
+        
+        res = res + PILBackgrounds.generate(self.PMS_uuid, key, auth_token, self.options['aTVScreenResolution'], g_ATVSettings.getSetting(self.ATV_udid, 'fanart_blur'), gradientTemplate, titleText, subtitleText, titleSize, subtitleSize, textColor, align, valign, offsetx, offsety, lineheight, blurStart, blurEnd, statusText)
+        dprint(__name__, 0, "Background: {0}", res)
         return res
 
     def ATTRIB_FanartCOUNT(self, src, srcXML, param):
