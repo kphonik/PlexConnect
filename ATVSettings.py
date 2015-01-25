@@ -90,6 +90,8 @@ options = { \
     'timeformat'        :('24 Hour', '12 Hour'), \
     'myplex_user'       :('', ), \
     'myplex_auth'       :('', ), \
+    'myplex_homeuser'   :('', ), \
+    'myplex_homeauth'   :('', ), \
 #   template options
     'subtitlecolor'             :('Grey', 'White', 'Plex Orange', 'Apple Blue'), \
     'titlecolor'                :('White', 'Grey', 'Plex Orange',  'Apple Blue'), \
