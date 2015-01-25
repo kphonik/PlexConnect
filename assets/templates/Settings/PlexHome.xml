@@ -12,7 +12,7 @@
             {{URL(:/fanartcache/{{getBackground({{EVAL({\
               'template'     : "plex",\
               'title'        : "{{EVAL(quote_plus("{{TEXT(Settings)}}"))}}",\
-              'subtitle'     : "{{EVAL(quote_plus("{{TEXT(Library Options)}}"))}}",\
+              'subtitle'     : "{{EVAL(quote_plus("{{TEXT(Plex Home)}}"))}}",\
               'image'        : "backgrounds/plex{{VAL($menubackground::Grey=default|Plex Orange=orange|Apple Blue=blue|Green=green)}}.png",\
               'resolution'   : "{{VAL(^aTVScreenResolution)}}",\
               'font'         : "fonts/OpenSans/OpenSans-Light.ttf",\
