@@ -76,7 +76,7 @@
               </oneLineMenuItem>
               <oneLineMenuItem id="PlexHomeUser" dimmed="true">{{CUT($myplex_auth::=| =CUT)}}
                 <label>{{TEXT(Switch Home User)}}</label>
-                <rightLabel>-</rightLabel>
+                <rightLabel></rightLabel>
                 <accessories>
                   <arrow/>
                 </accessories>
