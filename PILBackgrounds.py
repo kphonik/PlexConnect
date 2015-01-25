@@ -43,7 +43,7 @@ class ImageBackground():
         'resolution' : '1080',\
         'font' : 'fonts/OpenSans/OpenSans-Light.ttf',\
         'titleSize' : '45',\
-        'subtitleSize' : '30',\
+        'subtitleSize' : '35',\
         'titleColor' : 'ffffff',\
         'subtitleColor' : 'ffffff',\
         'anchorX' : 'right',\
@@ -427,6 +427,8 @@ def generate(PMS_uuid, url, authtoken, resolution, blurRadius, gradientTemplate,
     if resolution == '1080':
         width = 1920
         height = 1080
+        blurStart = (1080/100) * int(blurStart)
+        blurEnd = (1080/100) * int(blurEnd)
         blurRegion = (0, blurStart, 1920, blurEnd)
         # FT: get Background based on last Parameter
         layer = Image.open(stylepath + "/" + gradientTemplate + "_1080.png")
@@ -469,9 +471,9 @@ def generate(PMS_uuid, url, authtoken, resolution, blurRadius, gradientTemplate,
 
     # Handle 1080 / atv3 Text
     
-    statusSize = 20
-    statusX = 80
-    statusY = 25
+    statusSize = 30
+    statusX = 35
+    statusY = 15
 
     if resolution == '1080':
         statusSize = fullHDtext(statusSize)
