@@ -11,19 +11,13 @@
       <header>
           
           <imageHeader>
-              <image insets="0, 0, {{VAL(^aTVScreenResolution:1:720=440|1080=635)}}, 0" required="true">
-	      {{URL(:/fanartcache/{{getBackground({{EVAL({\
+              <image insets="0, 0, {{VAL(^aTVScreenResolution:1:720=440|1080=620)}}, 0" required="true">
+	      <!--{{URL(:/fanartcache/{{getBackground({{EVAL({\
               'template'    : 'plex',\
               'title'       : "{{EVAL(quote_plus("{{VAL(title1)}}"))}}",\
-              'subtitle'    : "{{EVAL(quote_plus("{{VAL(@OnDeck/Video/grandparentTitle)}} {{episodestring(@OnDeck/Video/parentIndex:0:@OnDeck/Video/index:0)}}"))}}",\
-              'image'       : "{{IMAGEURL(@OnDeck/Video/art:)}}",\
-              'resolution'  : "{{VAL(^aTVScreenResolution)}}",\
-              'font'        : "fonts/OpenSans/OpenSans-Light.ttf",\
-              'titleColor'  : "{{VAL($titlecolor::White=fafafa|Grey=878787|Plex Orange=ff8800|Apple Blue=1357d4)}}",\
-              'subtitleColor': "{{VAL($subtitlecolor::White=fafafa|Grey=878787|Plex Orange=ff8800|Apple Blue=1357d4)}}",\
-              'imageBlur'   : "{{VAL($fanartblur::1=1|2=2|3=3|0=)}}",\
               'layers'      : ["PlexSubGrid{{VAL($fanarttint::On=Text|Off=)}}"]\
-              })}})}})}}	      
+              })}})}})}}-->
+          {{BACKGROUNDURL(@OnDeck/Video/art::PlexGridText:{{EVAL(quote_plus("{{VAL(@OnDeck/Video/title)}}"))}}:{{EVAL(quote_plus("{{VAL(@OnDeck/Video/grandparentTitle)}} - {{episodestring(@OnDeck/Video/parentIndex:0:@OnDeck/Video/index:0)}}"))}}:35:20:FFFFFF:left:bottom:70:485:-50)}}	      
 	    </image>
           </imageHeader>
       </header>
@@ -39,8 +33,8 @@
                       <items>
                           <fourByThreePoster id="{{VAL(key)}}" featured="true" accessibilityLabel="{{VAL(title)}}" alwaysShowTitles="{{VAL($showtitles_library::Highlighted Only=false|Show All=true)}}"
                                   onPlay="atv.loadURL('{{URL(key:::PlexConnect=Play_Video_Pause&amp;PlexConnectRatingKey={{VAL(ratingKey)}})}}')"
-                            onSelect="atv.loadURL('{{URL(key:::includeExtras=1&amp;PlexConnect={{VAL(type::movie=Movie_|episode=TVShow_)}}PrePlay)}}')"
-                                  onHoldSelect="scrobbleMenu('{{URL(key:::PlexConnect={{VAL(type::movie=Scrobble_MenuVideo|episode=Scrobble_MenuTVOnDeck)}})}}')">
+                            onSelect="atv.loadURL('{{URL(key:::includeExtras=1&amp;PlexConnect=TVShow_PrePlay)}}')"
+                                  onHoldSelect="scrobbleMenu('{{URL(key:::PlexConnect=Scrobble_MenuTVOnDeck)}}')">
                               {{COPY(@OnDeck/Video)}}
                               {{VAR(items:NoKey:TRUE)}}  <!--within COPY this sets the var to TRUE-->
                               <title>{{VAL(title)}}</title>

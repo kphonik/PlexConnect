@@ -11,7 +11,7 @@
       <header>
           <imageHeader>
               <image insets="0, 0, {{VAL(^aTVScreenResolution:1:720=440|1080=635)}}, 0" required="true">
-	      {{URL(:/fanartcache/{{getBackground({{EVAL({\
+	      <!--{{URL(:/fanartcache/{{getBackground({{EVAL({\
               'template'    : 'plex',\
               'title'       : "{{EVAL(quote_plus("{{VAL(title1)}}"))}}",\
               'subtitle'    : "{{EVAL(quote_plus("{{VAL(@recentlyAdded/Video/title)}} / {{VAL(Video/year)}}"))}} ",\
@@ -22,7 +22,8 @@
               'subtitleColor': "{{VAL($subtitlecolor::White=fafafa|Grey=878787|Plex Orange=ff8800|Apple Blue=1357d4)}}",\
               'imageBlur'   : "{{VAL($fanartblur::1=1|2=2|3=3|0=)}}",\
               'layers'      : ["PlexSubGrid{{VAL($fanarttint::On=Text|Off=)}}"]\
-              })}})}})}}	      
+              })}})}})}}-->
+              {{BACKGROUNDURL(@recentlyAdded/Video/art::PlexGridTextMovie:{{EVAL(quote_plus("{{VAL(@recentlyAdded/Video/title)}}"))}}:{{VAL(Video/year)}}:35:20:FFFFFF:left:bottom:70:485:-50)}}
 	    </image>
           </imageHeader>
       </header>
