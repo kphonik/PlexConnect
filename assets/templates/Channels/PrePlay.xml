@@ -25,7 +25,7 @@
                 'offsetX' : '50',\
                 'offsetY' : '20',\
                 'lineheight' : '175',\
-                'layers': ["PlexPrePlay{{VAL($fanarttint::On=Text|Off=)}}","PlexPrePlayLine"{{VAL($menuhint::On=,"PlexPressMenu_{{VAL($subtitlecolor::White=white|Plex Orange=orange|Apple Blue=blue|Grey=grey)}}"|Off=)}}]\
+                'layers': ["PlexPrePlay{{VAL($fanarttint::On=Text|Off=)}}","PlexPrePlayLine"]\
                 })}})}})}}
 
 	      </image>

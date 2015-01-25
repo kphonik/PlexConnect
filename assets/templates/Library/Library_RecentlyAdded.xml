@@ -22,7 +22,7 @@
               'font'        : "fonts/OpenSans/OpenSans-Light.ttf",\
               'titleColor'  : "{{VAL($titlecolor::White=fafafa|Grey=878787|Plex Orange=ff8800|Apple Blue=1357d4)}}",\
               'subtitleColor': "{{VAL($subtitlecolor::White=fafafa|Grey=878787|Plex Orange=ff8800|Apple Blue=1357d4)}}",\
-              'layers'      : ["PlexList{{VAL($paradelisttint::On=Text|Off=)}}"{{VAL($menuhint::On=,"PlexPressMenu_{{VAL($subtitlecolor::White=white|Plex Orange=orange|Apple Blue=blue|Grey=grey)}}"|Off=)}}]\
+              'layers'      : ["PlexList{{VAL($paradelisttint::On=Text|Off=)}}"]\
               })}})}})}}
 	      </image>
 	    </imageHeader>

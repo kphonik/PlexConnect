@@ -26,7 +26,7 @@
                 'offsetX' : '50',\
                 'offsetY' : '20',\
                 'lineheight' : '175',\
-                'layers'      : ["PlexSubGrid{{VAL($fanarttint::On=Text|Off=)}}"{{VAL($menuhint::On=,"PlexPressMenu_{{VAL($subtitlecolor::White=white|Plex Orange=orange|Apple Blue=blue|Grey=grey)}}"|Off=)}}]\
+                'layers'      : ["PlexSubGrid{{VAL($fanarttint::On=Text|Off=)}}"]\
                 })}})}})}}
 	      </image>
 	    </imageHeader>
