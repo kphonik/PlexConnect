@@ -35,27 +35,13 @@
                 'layers': ["PlexPrePlay{{VAL($fanarttint::On=Text|Off=)}}","PlexPrePlayLine"]\
                 })}})}})}}
 
-	      </image>{{CUT($movielayers::Hide=CUT|Show=)}}
-           <image insets="0, 0, {{VAL(^aTVScreenResolution:1:720=440|1080=690)}}, 0" required="true">
-                {{URL(:/fanartcache/{{getBackground({{EVAL({\
-                
-                'title'       : "{{EVAL(quote_plus("{{VAL(Video/title)}}"))}}",\
-                'subtitle'    : "{{EVAL(quote_plus("{{VAL(Video/year)}} / {{VAL(Video/studio)}}"))}}",\
-                'image'       : "{{IMAGEURL(Video/art:::)}}",\
-                'resolution'  : "{{VAL(^aTVScreenResolution)}}",\
-                'imageBlur'   : "{{VAL($fanartblur::1=1|2=2|3=3|0=)}}",\
-                'titleSize' : '0',\
-                'subtitleSize' : '0',\
-                'layers': ["PlexPrePlayLine"]\
-                })}})}})}}
-          </image>{{CUT($movielayers::Hide=|Show=CUT)}}
+	      </image>
 	    </imageHeader>
 	   </header>
 
       <rating>{{contentRating(Video/contentRating)}}</rating>
       <summary>{{VAL(Video/summary)}}</summary>
-      <image style="moviePoster">{{IMAGEURL(Video/thumb::768)}}</image>{{CUT($movieposters::Show=|Hide=CUT)}}
-      <image style="moviePoster">{{IMAGEURL(#parentThumb::768)}}</image>{{CUT($movieposters::Hide=|Show=CUT)}}
+      <image style="moviePoster">{{IMAGEURL(Video/thumb::768)}}</image>
       <defaultImage>resource://Poster.png</defaultImage>
 
       <table>
@@ -95,7 +81,8 @@
             <label>{{VAL(Video/Producer[2]/tag)}}</label>
           </row>
           <row>
-            <mediaBadges />{{MEDIABADGES(Video/Media)}}
+            <label>{{VAL(Video/Media/videoResolution:Unknown:1080=1080p|720=720p|576=SD|480=SD|sd=SD)}} {{VAL(Video/Media/audioCodec:Unknown:ac3=AC3|aac=AAC|mp3=MP3|dca=DTS|drms=DRMS)}} {{VAL(Video/Media/audioChannels:Unknown:2=Stereo|6=5.1|8=7.1)}}</label>{{CUT(^aTVFirmwareVersion:CUT:=|6=CUT)}}
+            <mediaBadges />{{MEDIABADGES(Video/Media)}}{{CUT(^aTVFirmwareVersion::=CUT|6=)}}
             <label>{{VAL(Video/Role[3]/tag)}}</label>
             <label>{{VAL(Video/Director[3]/tag)}}</label>
             <label>{{VAL(Video/Producer[3]/tag)}}</label>

@@ -13,22 +13,15 @@ options = { \
     'playlistsview'             :('List', 'Tabbed List', 'Hide'), \
     'libraryview'               :('Grid', 'Paged Grid', 'Overview', 'List', 'Hide'), \
     'sharedlibrariesview'       :('Grid', 'Paged Grid', 'List', 'Hide'), \
-    'librariesview'             :('Hide', 'Grid', 'Paged Grid', 'List'), \
     'channelview'               :('Grid', 'List', 'Tabbed List', 'Hide'), \
     'sectionsposition'           :('Flow', 'Top'), \
     'movieview'                  :('Big Artwork', 'Grid', 'List', 'Detailed List'), \
-    'movieposters'               :('Show', 'Hide'), \
-    'movielayers'                :('Show', 'Hide'), \
     'homevideoview'              :('Grid', 'List', 'Detailed List'), \
     'showview'                   :('Big Artwork', 'Grid', 'List', 'Bookcase'), \
-    'movie_extras'                :('Show', 'Hide'), \
-    'episodeposters'             :('Show', 'Hide'), \
-    'showlayers'                 :('Show', 'Hide'), \
-    'seasonlayers'               :('Show', 'Hide'), \
-    'episodelayers'              :('Show', 'Hide'), \
-    'fanart_blur'               :('0', '5', '10', '15', '20'), \
+    'movie_extras'               :('Show', 'Hide'), \
+    'fanart_blur'                :('0', '5', '10', '15', '20'), \
     'episodeview'                :('List', 'Grid'), \
-    'seasonview'                 :('Big Artwork', 'Coverflow', 'List'), \
+    'seasonview'                 :('Coverflow', 'Big Artwork', 'List'), \
     'sectionicons'               :('Fanart', 'Plex', 'Custom'), \
     'sectionicons_shared'        :('Fanart', 'Plex'), \
     'sectionicons_all'           :('Fanart', 'Plex'), \

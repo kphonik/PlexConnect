@@ -96,7 +96,7 @@
                </items>
               </menuSection>
               
-              <menuSection>
+              <!--<menuSection>
                   <header>
                       <horizontalDivider alignment="left">
                           <title>{{TEXT(All Libraries)}}</title>
@@ -112,7 +112,7 @@
                 <rightLabel>{{SETTING(sectionicons_all)}}</rightLabel>
               </oneLineMenuItem>
                   </items>
-              </menuSection>
+              </menuSection>-->
               
               
               
