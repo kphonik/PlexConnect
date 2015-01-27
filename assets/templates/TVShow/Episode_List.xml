@@ -28,14 +28,7 @@
               'subtitleColor': "{{VAL($subtitlecolor::White=fafafa|Grey=878787|Plex Orange=ff8800|Apple Blue=1357d4)}}",\
               'layers'      : ["PlexSubList{{VAL($fanarttint::On=Text|Off=)}}"]\
               })}})}})}}
-          </image>{{CUT($episodelayers::Hide=CUT|Show=)}}
-          <image insets="0, 0, {{VAL(^aTVScreenResolution:1:720=550|1080=835)}}, 0" required="true">
-          {{URL(:/fanartcache/{{getBackground({{EVAL({\
-              
-              'image'       : "{{IMAGEURL(art:::)}}",\
-              'resolution'  : "{{VAL(^aTVScreenResolution)}}"\
-              })}})}})}}
-          </image>{{CUT($episodelayers::Hide=|Show=Hide)}}
+          </image>
         </imageHeader>
       </header>
       {{VAR(parentThumb:thumb)}}
