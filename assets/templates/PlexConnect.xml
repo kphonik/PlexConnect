@@ -21,10 +21,6 @@
           <url>{{URL(:/PMS(owned)/library/sections::PlexConnect=Library_View)}}</url>
         </navigationItem>{{CUT($libraryview:CUT:=|Hide=CUT|Hide =)}}{{CUT($librariesview::Hide=|Grid=CUT|Paged Grid=CUT|List=CUT)}}
         
-        <navigationItem id="All Libraries">
-          <title>{{TEXT(All Libraries)}}</title>
-          <url>{{URL(:/PMS(all)/library/sections::PlexConnect=Library_ViewAll)}}</url>
-        </navigationItem>{{CUT($librariesview:CUT:=|Hide=CUT|Hide =)}}{{CUT($myplex_auth:CUT:=CUT| =)}}
         
         <navigationItem id="Channels">
           <title>{{TEXT(Channels)}}</title>
