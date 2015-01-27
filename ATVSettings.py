@@ -20,6 +20,7 @@ options = { \
     'showview'                   :('Big Artwork', 'Grid', 'List', 'Bookcase'), \
     'movie_extras'               :('Show', 'Hide'), \
     'fanart_blur'                :('0', '5', '10', '15', '20'), \
+    'moviepreplay_bottomshelf'   :('Extras', 'Related Movies'), \
     'episodeview'                :('List', 'Grid'), \
     'seasonview'                 :('Coverflow', 'Big Artwork', 'List'), \
     'sectionicons'               :('Fanart', 'Plex', 'Custom'), \
