@@ -223,7 +223,7 @@
             <shelfSection>
               <items>
                 <moviePoster related="true" alwaysShowTitles="true" id="shelf_item_1" 
-                             onSelect="atv.loadAndSwapURL('{{URL(key:::includeExtras=1&amp;PlexConnect=Movie_PrePlay{{VAL($moviefanart::Hide=|Show=_Fanart)}})}}')">
+                             onSelect="atv.loadAndSwapURL('{{URL(key:::includeExtras=1&amp;PlexConnect=Movie_PrePlay)}}')">
                   {{COPY(@related/Video)}}
                   <title>{{VAL(title)}}</title>
                   <image>{{IMAGEURL(thumb::384)}}</image>
