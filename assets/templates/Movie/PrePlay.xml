@@ -48,28 +48,20 @@
 
       <table>
         <columnDefinitions>
-          <columnDefinition width="25" alignment="left">
+          <columnDefinition width="27" alignment="left">
             <title>{{TEXT(Details)}}</title>
           </columnDefinition>
-          <columnDefinition width="25" alignment="left">
+          <columnDefinition width="27" alignment="left">
             <title>{{TEXT(Actors)}}</title>
           </columnDefinition>
-          <columnDefinition width="25" alignment="left">
+          <columnDefinition width="27" alignment="left">
             <title>{{TEXT(Directors)}}</title>
           </columnDefinition>
-          <columnDefinition width="25" alignment="left">
+          <columnDefinition width="27" alignment="left">
             <title>{{TEXT(Producers)}}</title>
           </columnDefinition>
         </columnDefinitions>
         <rows>
-        <!--{{VAR(firststreamonly:0)}}
-         <__COPY__>
-             {{COPY(Video/Media/Part/Stream)}}
-             <row>
-                  <label>Subtitle: {{VAL(language:Unknown)}}</label>
-                  <label>Subtitletype: {{VAL(format:UNK)}}</label>  
-             </row>{{CUT(streamType::0=CUT|1=CUT|2=CUT|3=)}} 
-          </__COPY__>-->
           <row>
             <label>{{VAL(Video/Genre/tag)}}</label>
             <label>{{VAL(Video/Role/tag)}}</label>

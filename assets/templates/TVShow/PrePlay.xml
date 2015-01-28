@@ -74,23 +74,19 @@
             <mediaBadges />{{MEDIABADGES(Video/Media)}}{{CUT(^aTVFirmwareVersion::=CUT|6=)}}
             <label>{{VAL(Video/Director[3]/tag)}}</label>
             <label>{{VAL(Video/Writer[3]/tag)}}</label>
-            <label>{{VAL(Video/Producer[3]/tag)}}</label>
+            
           </row>
           <row>
-            <label>{{VAL(Video/Director[4]/tag)}}</label>
-            <label>{{VAL(Video/Writer[4]/tag)}}</label>
-            <label>{{VAL(Video/Producer[4]/tag)}}</label>
-          </row>
-
-            <row>
-             <starRating hasUserSetRating="true">
+          <starRating hasUserSetRating="true">
               <percentage>{{EVAL({{VAL(Video/userRating:0)}} * 10)}}</percentage>
             </starRating>{{CUT(Video/userRating:CUT:0=)}}
             <starRating>
               <percentage>{{EVAL({{VAL(Video/rating:0)}} * 10)}}</percentage>
             </starRating>{{CUT(Video/userRating::0=CUT)}}
+            <label>{{VAL(Video/Director[4]/tag)}}</label>
+            <label>{{VAL(Video/Writer[4]/tag)}}</label>
           </row>
-        </rows>
+         </rows>
       </table>
 
       <centerShelf>
