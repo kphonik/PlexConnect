@@ -13,6 +13,7 @@ options = { \
     'playlistsview'             :('List', 'Tabbed List', 'Hide'), \
     'libraryview'               :('Grid', 'Paged Grid', 'Overview', 'List', 'Hide'), \
     'sharedlibrariesview'       :('Grid', 'Paged Grid', 'List', 'Hide'), \
+    'librariesview'             :('Hide', 'Grid', 'Paged Grid', 'List'), \
     'channelview'               :('Grid', 'List', 'Tabbed List', 'Hide'), \
     'sectionsposition'           :('Flow', 'Top'), \
     'movieview'                  :('Big Artwork', 'Grid', 'List', 'Detailed List'), \
