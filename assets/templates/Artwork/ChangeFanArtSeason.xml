@@ -11,7 +11,7 @@
                 {{URL(:/fanartcache/{{getBackground({{EVAL({\
                 'template'    : 'plex',\
                 'title'       : "{{EVAL(quote_plus("{{VAL(title2)}}"))}}",\
-                'subtitle'    : "{{EVAL(quote_plus("{{TEXT(Select {{VAL(Video/type::show=TV Show|season=TV Show|episode=Season|movie=Movie)}} Fanart)}}"))}}",\
+                'subtitle'    : "{{EVAL(quote_plus("{{TEXT(Select Season Fanart)}}"))}}",\
                 'image'       : "{{IMAGEURL(art:::)}}",\
                 'resolution'  : "{{VAL(^aTVScreenResolution)}}",\
                 'font'        : "fonts/OpenSans/OpenSans-Light.ttf",\

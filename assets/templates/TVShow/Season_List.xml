@@ -32,7 +32,7 @@
               <twoLineEnhancedMenuItem id="{{VAL(key)}}" 
                                     onPlay="atv.loadURL('{{URL(key:::PlexConnect=TVShow_Episode_{{EVAL('{{VAL($episodeview)}}'.replace(' ', ''))}})}}')"
                                     onSelect="atv.loadURL('{{URL(key:::PlexConnect=TVShow_Episode_{{EVAL('{{VAL($episodeview)}}'.replace(' ', ''))}})}}')" 
-                                    onHoldSelect="scrobbleMenu('{{URL(key:::PlexConnect=Scrobble_Menu)}}')">
+                                    onHoldSelect="scrobbleMenu('{{URL(key:::PlexConnect=Scrobble_MenuSeason)}}')">
                 {{COPY(Directory)}}
                 <label>{{VAL(title)}}</label>
                 <label2>{{VAL(leafCount)}} {{TEXT(Episodes)}}</label2>
