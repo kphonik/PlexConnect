@@ -13,7 +13,7 @@
           <imageHeader>
               <image insets="0, 0, {{VAL(^aTVScreenResolution:1:720=413|1080=620)}}, 0" required="true">
 	      <!--{{URL(:/fanartcache/{{getBackground({{EVAL({\
-              'template'    : 'plex',\
+              'template'    : 'Plex',\
               'title'       : "{{EVAL(quote_plus("{{VAL(title1)}}"))}}",\
               'layers'      : ["PlexSubGrid{{VAL($fanarttint::On=Text|Off=)}}"]\
               })}})}})}}-->

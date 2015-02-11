@@ -21,9 +21,9 @@
        <imageHeader>
            <image insets="0, 0, {{VAL(^aTVScreenResolution:1:720=630|1080=945)}}, 0" required="true">
                {{URL(:/fanartcache/{{getBackground({{EVAL({\
-               'template'    : 'plex',\
+               'template'    : 'Plex',\
                'title'       : "{{EVAL(quote_plus("{{TEXT(Plex Library)}}"))}}",\
-               'image'       : "backgrounds/plex{{VAL($menubackground::Grey=default|Plex Orange=orange|Apple Blue=blue|Green=green)}}.png",\
+               'image'       : "backgrounds/plex{{VAL($menubackground::Default=default|Grey=grey|Plex Orange=orange|Apple Blue=blue|Green=green)}}.png",\
                'resolution'  : "{{VAL(^aTVScreenResolution)}}",\
                'font'        : "fonts/OpenSans/OpenSans-Light.ttf",\
                'titleColor'  : "{{VAL($titlecolor::White=fafafa|Grey=878787|Plex Orange=ff8800|Apple Blue=1357d4)}}",\
@@ -35,9 +35,9 @@
            <imageHeader>
            <image insets="0, 0, {{VAL(^aTVScreenResolution:1:720=630|1080=905)}}, 0" required="true">
                {{URL(:/fanartcache/{{getBackground({{EVAL({\
-               'template'    : 'plex',\
+               'template'    : 'Plex',\
                'title'       : "{{EVAL(quote_plus("{{TEXT(Plex Library)}}"))}}",\
-               'image'       : "backgrounds/plex{{VAL($menubackground::Grey=default|Plex Orange=orange|Apple Blue=blue|Green=green)}}.png",\
+               'image'       : "backgrounds/plex{{VAL($menubackground::Default=default|Grey=grey|Plex Orange=orange|Apple Blue=blue|Green=green)}}.png",\
                'resolution'  : "{{VAL(^aTVScreenResolution)}}",\
                'font'        : "fonts/OpenSans/OpenSans-Light.ttf",\
                'titleColor'  : "{{VAL($titlecolor::White=fafafa|Grey=878787|Plex Orange=ff8800|Apple Blue=1357d4)}}",\
@@ -49,9 +49,9 @@
            <imageHeader>
            <image insets="0, 0, {{VAL(^aTVScreenResolution:1:720=630|1080=905)}}, 0" required="true">
                {{URL(:/fanartcache/{{getBackground({{EVAL({\
-               'template'    : 'plex',\
+               'template'    : 'Plex',\
                'title'       : "{{EVAL(quote_plus("{{TEXT(Plex Library)}}"))}}",\
-               'image'       : "backgrounds/plex{{VAL($menubackground::Grey=default|Plex Orange=orange|Apple Blue=blue|Green=green)}}.png",\
+               'image'       : "backgrounds/plex{{VAL($menubackground::Default=default|Grey=grey|Plex Orange=orange|Apple Blue=blue|Green=green)}}.png",\
                'resolution'  : "{{VAL(^aTVScreenResolution)}}",\
                'font'        : "fonts/OpenSans/OpenSans-Light.ttf",\
                'titleColor'  : "{{VAL($titlecolor::White=fafafa|Grey=878787|Plex Orange=ff8800|Apple Blue=1357d4)}}",\
@@ -83,7 +83,7 @@
             {{VAR(items:NoKey:TRUE)}}
             <image>
               {{URL(:/fanartcache/{{getBackground({{EVAL({\
-              'template'    : 'plex',\
+              'template'    : 'Plex',\
               'title'       : "{{VAL(title)}}",\
               'image'       : "{{IMAGEURL(thumb::768)}}",\
               'resolution'  : "square",\
@@ -98,7 +98,7 @@
             </image>{{CUT($sectionicons::Apple=CUT|Plex=|Fanart=CUT|Custom=CUT)}}
             <image>
                 {{URL(:/fanartcache/{{getBackground({{EVAL({\
-                'template'    : 'plex',\
+                'template'    : 'Plex',\
                 'title'       : "{{VAL(title)}}",\
                 'image'       : "flow/{{VAL(type)}}-flow.png",\
                 'resolution'  : "flow",\
@@ -113,7 +113,7 @@
             </image>{{CUT($sectionicons::Apple=|Plex=CUT|Fanart=CUT|Custom=CUT)}}
              <image>
                  {{URL(:/fanartcache/{{getBackground({{EVAL({\
-                 'template'    : 'plex',\
+                 'template'    : 'Plex',\
                  'title'       : "{{VAL(title)}}",\
                  'image'       : "flow/{{VAL(type)}}-flow-plex.png",\
                  'resolution'  : "flow",\
@@ -128,7 +128,7 @@
             </image>{{CUT($sectionicons::Apple=CUT|Plex=CUT|Fanart=|Custom=CUT)}}
              <image>
                  {{URL(:/fanartcache/{{getBackground({{EVAL({\
-                 'template'    : 'plex',\
+                 'template'    : 'Plex',\
                  'title'       : "{{VAL(title)}}",\
                  'image'       : "custom/flow/{{EVAL("{{VAL(title)}}".replace(' ', ''))}}-flow.png",\
                  'resolution'  : "flow",\
@@ -151,7 +151,7 @@
                           onSelect="atv.loadURL('{{URL(searchKey)}}')">
                           <image>
                               {{URL(:/fanartcache/{{getBackground({{EVAL({\
-                              'template'    : 'plex',\
+                              'template'    : 'Plex',\
                               'title'       : "{{TEXT(Search)}}",\
                               'image'       : "icons/plexsearch.png",\
                               'resolution'  : "square",\
@@ -166,7 +166,7 @@
                           </image>{{CUT($sectionicons::Apple=CUT|Plex=|Fanart=CUT|Custom=CUT)}}
                           <image>
                               {{URL(:/fanartcache/{{getBackground({{EVAL({\
-                              'template'    : 'plex',\
+                              'template'    : 'Plex',\
                               'title'       : "{{TEXT(Search)}}",\
                               'image'       : "icons/search-flow.png",\
                               'resolution'  : "flow",\
@@ -181,7 +181,7 @@
                           </image>{{CUT($sectionicons::Apple=|Plex=CUT|Fanart=CUT|Custom=CUT)}}
                           <image>
                               {{URL(:/fanartcache/{{getBackground({{EVAL({\
-                              'template'    : 'plex',\
+                              'template'    : 'Plex',\
                               'title'       : "{{TEXT(Search)}}",\
                               'image'       : "icons/search-flow.png",\
                               'resolution'  : "flow",\
@@ -196,7 +196,7 @@
                           </image>{{CUT($sectionicons::Apple=CUT|Plex=CUT|Fanart=|Custom=CUT)}}
                           <image>
                              {{URL(:/fanartcache/{{getBackground({{EVAL({\
-                              'template'    : 'plex',\
+                              'template'    : 'Plex',\
                               'title'       : "{{TEXT(Search)}}",\
                               'image'       : "icons/search-flow.png",\
                               'resolution'  : "flow",\
@@ -241,7 +241,7 @@
                   
                     <title>{{VAL(title)}}</title>
                     <image>{{IMAGEURL(art::768)}}</image>{{CUT($sectionicons::Apple=|Plex=CUT|Fanart=CUT|Custom=CUT)}}
-                    <image>{{URL(:/templates/plex/images/icons/{{VAL(type)}}.png)}}</image>{{CUT($sectionicons::Apple=CUT|Plex=CUT|Fanart=|Custom=CUT)}}
+                    <image>{{URL(:/thumbnails/Plex/images/icons/{{VAL(type)}}.png)}}</image>{{CUT($sectionicons::Apple=CUT|Plex=CUT|Fanart=|Custom=CUT)}}
                     <image>{{IMAGEURL(thumb::768)}}</image>{{CUT($sectionicons::Apple=CUT|Plex=|Fanart=CUT|Custom=CUT)}}
                     <image>{{URL(:/templates/plex/images/custom/top/{{EVAL("{{VAL(title)}}".replace(' ', ''))}}.png)}}</image>{{CUT($sectionicons::Apple=CUT|Plex=CUT|Fanart=CUT|Custom=)}}
                     <defaultImage>resource://16X9.png</defaultImage>
@@ -253,7 +253,7 @@
                                onPlay="atv.loadURL('{{URL(searchKey)}}')"
                                onSelect="atv.loadURL('{{URL(searchKey)}}')">
                     <title>{{TEXT(Search)}}</title>
-                    <image>{{URL(:/templates/plex/images/icons/search.png)}}</image>
+                    <image>{{URL(:/thumbnails/Plex/images/icons/search.png)}}</image>
                     <defaultImage>resource://16X9.png</defaultImage>
                   </moviePoster>{{CUT($library_search::Show=|Hide=CUT)}} 
                   

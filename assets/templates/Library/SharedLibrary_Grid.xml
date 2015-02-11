@@ -17,9 +17,9 @@
         <imageHeader>
            <image insets="0, 0, {{VAL(^aTVScreenResolution:1:720=630|1080=945)}}, 0" required="true">
                {{URL(:/fanartcache/{{getBackground({{EVAL({\
-               'template'    : 'plex',\
+               'template'    : 'Plex',\
                'title'       : "{{EVAL(quote_plus("{{TEXT(Shared Libraries)}}"))}}",\
-               'image'       : "backgrounds/plex{{VAL($menubackground::Grey=default|Plex Orange=orange|Apple Blue=blue|Green=green)}}.png",\
+               'image'       : "backgrounds/plex{{VAL($menubackground::Default=default|Grey=grey|Plex Orange=orange|Apple Blue=blue|Green=green)}}.png",\
                'resolution'  : "{{VAL(^aTVScreenResolution)}}",\
                'font'        : "fonts/OpenSans/OpenSans-Light.ttf",\
                'titleColor'  : "{{VAL($titlecolor::White=fafafa|Grey=878787|Plex Orange=ff8800|Apple Blue=1357d4)}}",\
@@ -57,7 +57,7 @@
                   
                     <title>{{VAL(title)}}</title>
                     <image>{{IMAGEURL(art::768)}}</image>{{CUT($sectionicons_shared::Apple=|Plex=CUT|Fanart=CUT|Custom=CUT)}}
-                    <image>{{URL(:/templates/plex/images/icons/{{VAL(type)}}.png)}}</image>{{CUT($sectionicons_shared::Apple=CUT|Plex=CUT|Fanart=|Custom=CUT)}}
+                    <image>{{URL(:/thumbnails/Plex/images/icons/{{VAL(type)}}.png)}}</image>{{CUT($sectionicons_shared::Apple=CUT|Plex=CUT|Fanart=|Custom=CUT)}}
                     <image>{{IMAGEURL(thumb::768)}}</image>{{CUT($sectionicons_shared::Apple=CUT|Plex=|Fanart=CUT|Custom=CUT)}}
                     <defaultImage>resource://16X9.png</defaultImage>
                     <!--badgeCount></badgeCount-->
@@ -68,7 +68,7 @@
                                onPlay="atv.loadURL('{{URL(searchKey)}}')"
                                onSelect="atv.loadURL('{{URL(searchKey)}}')">
                     <title>{{TEXT(Search)}}</title>
-                    <image>{{URL(:/templates/plex/images/icons/search.png)}}</image>
+                    <image>{{URL(:/thumbnails/Plex/images/icons/search.png)}}</image>
                     <defaultImage>resource://16X9.png</defaultImage>
                   </moviePoster>{{CUT($library_search::Show=|Hide=CUT)}} 
                   

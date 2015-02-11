@@ -36,7 +36,7 @@ from PIL import ImageFilter
 
 class ImageBackground():
     options = {\
-        'template' : 'plex',\
+        'template' : 'Plex',\
         'title' : '',\
         'subtitle' : '',\
         'image' : 'blank.jpg',\
@@ -255,7 +255,7 @@ class ImageBackground():
     
     # Catch the Params
         cachepath = sys.path[0]+"/assets/fanartcache"
-        stylepath = sys.path[0]+"/assets/templates/"+self.cfg['template']
+        stylepath = sys.path[0]+"/assets/thumbnails/"+self.cfg['template']
         cachefile = self.createFileHandle()
         
         dprint(__name__, 1, 'Check for Cachefile.')  # Debug
@@ -382,7 +382,7 @@ def textToImage(stylepath, im, resolution, textToWrite, fontsize, color, align, 
 
 def generate(PMS_uuid, url, authtoken, resolution, blurRadius, gradientTemplate, titleText, subtitleText, titleSize, subtitleSize, textColor, align, valign, offsetx, offsety, lineheight, blurStart, blurEnd, statusText):
     cachepath = sys.path[0]+"/assets/fanartcache"
-    stylepath = sys.path[0]+"/assets/thumbnails"
+    stylepath = sys.path[0]+"/assets/thumbnails/Plex/images"
 
     # Create cache filename
     id = re.search('/library/metadata/(?P<ratingKey>\S+)/art/(?P<fileId>\S+)', url)
@@ -412,13 +412,13 @@ def generate(PMS_uuid, url, authtoken, resolution, blurRadius, gradientTemplate,
         background = Image.open(io.BytesIO(response))
     except urllib2.URLError as e:
         dprint(__name__, 0, 'URLError: {0} // url: {1}', e.reason, url)
-        return "/thumbnails/Background_blank_" + resolution + ".jpg"
+        return "/thumbnails/Plex/images/backgrounds/Background_blank_" + resolution + ".jpg"
     except urllib2.HTTPError as e:
         dprint(__name__, 0, 'HTTPError: {0} {1} // url: {2}', str(e.code), e.msg, url)
-        return "/thumbnails/Background_blank_" + resolution + ".jpg"
+        return "/thumbnails/Plex/images/backgrounds/Background_blank_" + resolution + ".jpg"
     except IOError as e:
         dprint(__name__, 0, 'IOError: {0} // url: {1}', str(e), url)
-        return "/thumbnails/Background_blank_" + resolution + ".jpg"
+        return "/thumbnails/Plex/images/backgrounds/Background_blank_" + resolution + ".jpg"
     
     blurRadius = int(blurRadius)
     
@@ -461,7 +461,7 @@ def generate(PMS_uuid, url, authtoken, resolution, blurRadius, gradientTemplate,
 
     except:
         dprint(__name__, 0, 'Error - Failed to modify image')
-        return "/thumbnails/Background_blank_" + resolution + ".jpg"
+        return "/thumbnails/Plex/images/backgrounds/Background_blank_" + resolution + ".jpg"
 
     background = textToImage(stylepath, background, resolution, titleText, titleSize, textColor, align, valign, offsetx, offsety)
 
@@ -489,7 +489,7 @@ def generate(PMS_uuid, url, authtoken, resolution, blurRadius, gradientTemplate,
         background.save(cachepath+"/"+cachefile)
     except:
         dprint(__name__, 0, 'Error - Failed to save image file')
-        return "/thumbnails/Background_blank_" + resolution + ".jpg"
+        return "/thumbnails/Plex/images/backgrounds/Background_blank_" + resolution + ".jpg"
     
     dprint(__name__, 1, 'Cachefile  generated.')  # Debug
     return "/fanartcache/"+cachefile
@@ -523,7 +523,7 @@ def normalizeString(text):
 
 def textToImage(stylepath, im, resolution, textToWrite, fontsize, color, align, valign, offsetX, offsetY):
     # Set Font
-    font = stylepath + "/font.ttf"
+    font = stylepath + "/Plex/fonts/OpenSans/OpenSans-Light.ttf"
 
     # Set Color From Hex Value
     if is_hex(color):

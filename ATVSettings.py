@@ -11,9 +11,9 @@ from Debug import *  # dprint()
 
 options = { \
     'playlistsview'             :('List', 'Tabbed List', 'Hide'), \
-    'libraryview'               :('Grid', 'Paged Grid', 'Overview', 'Overview Paged', 'List', 'Hide'), \
-    'sharedlibrariesview'       :('Grid', 'Paged Grid', 'Overview', 'Overview Paged', 'List', 'Hide'), \
-    'librariesview'             :('Hide', 'Grid', 'Paged Grid', 'Overview', 'Overview Paged', 'List'), \
+    'libraryview'               :('Grid', 'Overview', 'List', 'Hide'), \
+    'sharedlibrariesview'       :('Grid', 'Overview', 'List', 'Hide'), \
+    'librariesview'             :('Hide', 'Grid', 'Overview', 'List'), \
     'channelview'               :('Grid', 'List', 'Tabbed List', 'Hide'), \
     'sectionsposition'           :('Flow', 'Top'), \
     'movieview'                  :('Big Artwork', 'Grid', 'List', 'Detailed List'), \
@@ -33,7 +33,6 @@ options = { \
     'library_recentlyadded'      :('checked', 'unchecked'), \
     'library_channels'           :('unchecked', 'checked'), \
     'showtitles_library'         :('Show All', 'Highlighted Only'), \
-    'starttab'                   :('Library', 'Shared Libraries', 'Channels'), \
     'actorview'                  :('Movies', 'Portrait'), \
     'flattenseason'              :('False', 'True'), \
     'durationformat'             :('Hours/Minutes', 'Minutes'), \
@@ -99,7 +98,7 @@ options = { \
     'listtint'                  :('Off', 'On'), \
     'paradelisttint'            :('Off', 'On'), \
     'menuhint'                  :('Off', 'On'), \
-    'menubackground'            :('Grey', 'Plex Orange', 'Apple Blue', 'Green'), \
+    'menubackground'            :('Default', 'Grey', 'Plex Orange', 'Apple Blue', 'Green'), \
     }
 
 

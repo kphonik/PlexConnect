@@ -17,7 +17,7 @@
 	    <imageHeader>
 	      <image insets="0, 0, {{VAL(^aTVScreenResolution:1:720=440|1080=690)}}, 0" required="true">
 	      {{URL(:/fanartcache/{{getBackground({{EVAL({\
-              'template'    : 'plex',\
+              'template'    : 'Plex',\
               'title'       : "{{EVAL(quote_plus("{{VAL(Video/grandparentTitle)}}"))}}",\
               'subtitle'    : "{{EVAL(quote_plus("{{VAL(Video/index)}}. {{VAL(Video/title)}}"))}}",\
               'image'       : "{{IMAGEURL(Video/art:::)}}",\

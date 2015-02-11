@@ -247,7 +247,7 @@ def XML_PMS2aTV(PMS_address, path, options):
         g_ATVSettings.setSetting(UDID, 'plexhome_user', '')
         g_ATVSettings.setSetting(UDID, 'plexhome_auth', '')
         
-        XMLtemplate = 'Settings/Main.xml'
+        XMLtemplate = 'Settings/MyPlex.xml'
         path = ''  # clear path - we don't need PMS-XML
     
     elif cmd=='MyPlexLogout':
@@ -263,7 +263,7 @@ def XML_PMS2aTV(PMS_address, path, options):
         g_ATVSettings.setSetting(UDID, 'plexhome_user', '')
         g_ATVSettings.setSetting(UDID, 'plexhome_auth', '')
         
-        XMLtemplate = 'Settings/Main.xml'
+        XMLtemplate = 'Settings/MyPlex.xml'
         path = ''  # clear path - we don't need PMS-XML
     
     elif cmd=='MyPlexSwitchHomeUser':

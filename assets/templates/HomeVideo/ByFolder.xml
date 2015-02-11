@@ -9,10 +9,10 @@
 	  <imageHeader>
           <image insets="0, 0, {{VAL(^aTVScreenResolution:1:720=550|1080=825)}}, 0" required="true">
 	    {{URL(:/fanartcache/{{getBackground({{EVAL({\
-              'template'    : 'plex',\
+              'template'    : 'Plex',\
               'title'       : "{{EVAL(quote_plus("{{VAL(title1)}}"))}}",\
               'subtitle'    : "{{EVAL(quote_plus("{{VAL(title2)}}"))}}",\
-              'image'       : "backgrounds/plex{{VAL($menubackground::Grey=default|Plex Orange=orange|Apple Blue=blue|Green=green)}}.png",\
+              'image'       : "backgrounds/plex{{VAL($menubackground::Default=default|Grey=grey|Plex Orange=orange|Apple Blue=blue|Green=green)}}.png",\
               'resolution'  : "{{VAL(^aTVScreenResolution)}}",\
               'font'        : "fonts/OpenSans/OpenSans-Light.ttf",\
               'titleColor'  : "{{VAL($titlecolor::White=fafafa|Grey=878787|Plex Orange=ff8800|Apple Blue=1357d4)}}",\
@@ -60,7 +60,7 @@
                 
                 'title'       : "{{EVAL(quote_plus("{{VAL(title1)}}"))}}",\
                 'subtitle'    : "{{EVAL(quote_plus("{{VAL(title2)}}"))}}",\
-                'image'       : "backgrounds/plex{{VAL($menubackground::Grey=default|Plex Orange=orange|Apple Blue=blue|Green=green)}}.png",\
+                'image'       : "backgrounds/plex{{VAL($menubackground::Default=default|Grey=grey|Plex Orange=orange|Apple Blue=blue|Green=green)}}.png",\
                 'resolution'  : "{{VAL(^aTVScreenResolution)}}",\
                 'font'        : "fonts/OpenSans/OpenSans-Light.ttf",\
                 'titleColor'  : "{{VAL($titlecolor::White=fafafa|Grey=878787|Plex Orange=ff8800|Apple Blue=1357d4)}}",\
@@ -119,10 +119,10 @@
         <imageHeader>
 	      <image insets="0, 0, {{VAL(^aTVScreenResolution:1:720=650|1080=975)}}, 0" required="true">
               {{URL(:/fanartcache/{{getBackground({{EVAL({\
-              'template' : 'plex',\
+              'template' : 'Plex',\
               'title'       : "{{EVAL(quote_plus("{{VAL(title1)}}"))}}",\
               'subtitle'    : "{{EVAL(quote_plus("{{VAL(title2)}}"))}}",\
-              'image'       : "backgrounds/plex{{VAL($menubackground::Grey=default|Plex Orange=orange|Apple Blue=blue|Green=green)}}.png",\
+              'image'       : "backgrounds/plex{{VAL($menubackground::Default=default|Grey=grey|Plex Orange=orange|Apple Blue=blue|Green=green)}}.png",\
               'resolution'  : "{{VAL(^aTVScreenResolution)}}",\
               'font'        : "fonts/OpenSans/OpenSans-Light.ttf",\
               'titleColor'  : "{{VAL($titlecolor::White=fafafa|Grey=878787|Plex Orange=ff8800|Apple Blue=1357d4)}}",\

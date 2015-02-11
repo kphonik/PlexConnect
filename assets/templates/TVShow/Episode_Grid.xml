@@ -10,7 +10,7 @@
         <imageHeader>
            <image insets="0, 0, {{VAL(^aTVScreenResolution:1:720=590|1080=800)}}, 0" required="true">
            {{URL(:/fanartcache/{{getBackground({{EVAL({\
-              'template' : 'plex',\
+              'template' : 'Plex',\
               'title'       : "{{EVAL(quote_plus("{{VAL(title1)}}"))}}",\
               'subtitle'    : "{{EVAL(quote_plus("{{VAL(title2)}}"))}}",\
               'image'       : "{{IMAGEURL(art:::)}}",\

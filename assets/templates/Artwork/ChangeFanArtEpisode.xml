@@ -9,7 +9,7 @@
         <imageHeader>
         	    <image insets="0, 0, {{VAL(^aTVScreenResolution:1:720=240|1080=360)}}, 0" required="true">
                 {{URL(:/fanartcache/{{getBackground({{EVAL({\
-                'template'    : 'plex',\
+                'template'    : 'Plex',\
                 'title'       : "{{EVAL(quote_plus("{{VAL(title2)}}"))}}",\
                 'subtitle'    : "{{EVAL(quote_plus("{{TEXT(Select Episode Fanart)}}"))}}",\
                 'image'       : "{{IMAGEURL(art:::)}}",\
