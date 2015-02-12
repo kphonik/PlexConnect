@@ -247,7 +247,7 @@ def XML_PMS2aTV(PMS_address, path, options):
         g_ATVSettings.setSetting(UDID, 'plexhome_user', '')
         g_ATVSettings.setSetting(UDID, 'plexhome_auth', '')
         
-        XMLtemplate = 'Settings/MyPlex.xml'
+        XMLtemplate = 'Settings/Main.xml'
         path = ''  # clear path - we don't need PMS-XML
     
     elif cmd=='MyPlexLogout':
@@ -263,7 +263,7 @@ def XML_PMS2aTV(PMS_address, path, options):
         g_ATVSettings.setSetting(UDID, 'plexhome_user', '')
         g_ATVSettings.setSetting(UDID, 'plexhome_auth', '')
         
-        XMLtemplate = 'Settings/MyPlex.xml'
+        XMLtemplate = 'Settings/Main.xml'
         path = ''  # clear path - we don't need PMS-XML
     
     elif cmd=='MyPlexSwitchHomeUser':
@@ -351,15 +351,6 @@ def XML_PMS2aTV(PMS_address, path, options):
         dir = dir.replace('Video', 'HomeVideo')
         dir = dir.replace('iTunes', 'Music')
         cmd = 'Overview'
-        
-    # Overview Paged case scanners
-    if cmd.find('Pagedview') != -1:
-        dprint(__name__, 0, "Overview Paged scanner found, updating command.")
-        parts = cmd.split('_')
-        dir = parts[0].replace('Series', 'TVShow')
-        dir = dir.replace('Video', 'HomeVideo')
-        dir = dir.replace('iTunes', 'Music')
-        cmd = 'Pagedview'
     
     # Special case scanners
     if cmd.find('Scanner') != -1:

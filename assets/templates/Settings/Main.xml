@@ -63,7 +63,7 @@
               </oneLineMenuItem>
               
               <oneLineMenuItem id="MyPlexView" onSelect="atv.loadURL('{{URL(:/::PlexConnect=Settings_MyPlex)}}')">
-                <label>{{TEXT(MyPlex)}}</label>
+                <label>{{TEXT(MyPlex Account)}}</label>
                 <accessories>
                   <arrow/>
                 </accessories>                
@@ -71,7 +71,7 @@
               
               <oneLineMenuItem id="PlexHomeUser" dimmed="true">{{CUT($myplex_auth::=| =CUT)}}
                 <label>{{TEXT(Switch Home User)}}</label>
-                <rightLabel>-</rightLabel>
+                <rightLabel></rightLabel>
                 <accessories>
                   <arrow/>
                 </accessories>
