@@ -32,8 +32,6 @@ assets/templates/MoviePrePlay_Fanart.xml
 assets/templates/EpisodePrePlay_Fanart.xml
 
 
-assets/fanartcache/*.png
-
 assets/templates/TVShow/DetailedList.xml
 
 assets/templates/TVShow/Episode_List_Fanart.xml
@@ -45,7 +43,7 @@ assets/templates/TVShow/Season_Coverflow_Fanart.xml
 
 assets/templates/TVShow/Season_List_Fanart.xml
 
-assets/fanartcache/tmp.png
+
 
 assets/templates/TVShow/Season_Coverflow_Fanart.xml
 
