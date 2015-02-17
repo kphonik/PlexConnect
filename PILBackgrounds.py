@@ -459,10 +459,7 @@ def generate(PMS_uuid, url, authtoken, resolution, blurRadius, gradientTemplate,
 
         background.paste(layer, ( 0, 0), layer)
 
-    except:
-        dprint(__name__, 0, 'Error - Failed to modify image')
-        return "/thumbnails/Background_blank_" + resolution + ".jpg"
-
+    
     background = textToImage(stylepath, background, resolution, titleText, titleSize, textColor, align, valign, offsetx, offsety)
 
     if subtitleText != "":
@@ -484,11 +481,10 @@ def generate(PMS_uuid, url, authtoken, resolution, blurRadius, gradientTemplate,
             background = textToImage(stylepath, background, resolution, statusText, statusSize, textColor, "right", "top", statusX, statusY)
 
 
-    try:
         # Save to Cache
         background.save(cachepath+"/"+cachefile)
     except:
-        dprint(__name__, 0, 'Error - Failed to save image file')
+        dprint(__name__, 0, 'Error - Failed to generate background image.\n{0}', traceback.format_exc())
         return "/thumbnails/Background_blank_" + resolution + ".jpg"
     
     dprint(__name__, 1, 'Cachefile  generated.')  # Debug
