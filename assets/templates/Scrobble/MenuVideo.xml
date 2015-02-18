@@ -59,9 +59,9 @@
               <label>{{TEXT(Change {{VAL(Video/type::show=TV Show|season=Season|episode=Episode|movie=Movie)}} Poster)}}</label>
             </oneLineMenuItem>
             
-            <oneLineMenuItem id="item4" onSelect="atv.loadURL('{{URL(Video/key:::PlexConnect=Artwork_{{VAL(type::movie=ChangeFanArtVideo|episode=ChangeFanArtEpisode)}})}}')">
+            <oneLineMenuItem id="item4" onSelect="atv.loadURL('{{URL(Video/key:::PlexConnect=Artwork_ChangeFanArtVideo)}}')">
               <label>{{TEXT(Change {{VAL(Video/type::show=TV Show|season=Season|episode=Episode|movie=Movie)}} Fanart)}}</label>
-            </oneLineMenuItem>
+            </oneLineMenuItem>{{CUT(viewGroup::episode=CUT)}}
           </items>
         </menuSection>
       </sections> 
