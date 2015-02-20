@@ -243,7 +243,7 @@
                     <image>{{IMAGEURL(art::768)}}</image>{{CUT($sectionicons::Apple=|Plex=CUT|Fanart=CUT|Custom=CUT)}}
                     <image>{{URL(:/thumbnails/Plex/images/icons/{{VAL(type)}}.png)}}</image>{{CUT($sectionicons::Apple=CUT|Plex=CUT|Fanart=|Custom=CUT)}}
                     <image>{{IMAGEURL(thumb::768)}}</image>{{CUT($sectionicons::Apple=CUT|Plex=|Fanart=CUT|Custom=CUT)}}
-                    <image>{{URL(:/templates/plex/images/custom/top/{{EVAL("{{VAL(title)}}".replace(' ', ''))}}.png)}}</image>{{CUT($sectionicons::Apple=CUT|Plex=CUT|Fanart=CUT|Custom=)}}
+                    <image>{{URL(:/templates/Plex/images/custom/top/{{EVAL("{{VAL(title)}}".replace(' ', ''))}}.png)}}</image>{{CUT($sectionicons::Apple=CUT|Plex=CUT|Fanart=CUT|Custom=)}}
                     <defaultImage>resource://16X9.png</defaultImage>
                     <!--badgeCount></badgeCount-->
                   </moviePoster>
