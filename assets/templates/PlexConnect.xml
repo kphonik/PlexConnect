@@ -9,7 +9,7 @@
     <viewWithNavigationBar id="PlexConnect_Navigation" onNavigate="loadMenuPage(event)"
                            volatile="true" onVolatileReload="updatePage('{{URL()}}/PlexConnect.xml');">
       {{VAR(ix::{{VAL($libraryview::=1|Hide={{VAL($sharedlibrariesview::=1|Hide=0|Hide =1)}}|Hide =1)}})}}  <!--1 if library or shared library to be shown-->
-      <navigation currentIndex="1">
+      <navigation currentIndex="{{VAL($playlistsview::={{VAL(#ix)}}|Hide=0|Hide ={{VAL(#ix)}})}}">
       
         <navigationItem id="Playlists">
           <title>{{TEXT(Playlists)}}</title>
@@ -19,13 +19,8 @@
         <navigationItem id="Library">
           <title>{{TEXT(Library)}}</title>
           <url>{{URL(:/PMS(owned)/library/sections::PlexConnect=Library_View)}}</url>
-        </navigationItem>{{CUT($libraryview:CUT:=|Hide=CUT|Hide =)}}{{CUT($librariesview::Hide=|Grid=CUT|Paged Grid=CUT|Overview=CUT|Overview Paged=CUT|List=CUT)}}
-        
-        <navigationItem id="All Libraries">
-          <title>{{TEXT(All Libraries)}}</title>
-          <url>{{URL(:/PMS(all)/library/sections::PlexConnect=Library_ViewAll)}}</url>
-        </navigationItem>{{CUT($librariesview:CUT:=|Hide=CUT|Hide =)}}
-              
+        </navigationItem>{{CUT($libraryview:CUT:=|Hide=CUT|Hide =)}}
+                      
         <navigationItem id="Channels">
           <title>{{TEXT(Channels)}}</title>
           <url>{{URL(:/PMS(owned)/channels/all::PlexConnect=Channels_View)}}</url>
@@ -34,7 +29,7 @@
         <navigationItem id="SharedLibraries">
           <title>{{TEXT(Shared Libraries)}}</title>
           <url>{{URL(:/PMS(shared)/library/sections::PlexConnect=Library_ViewShared)}}</url>
-        </navigationItem>{{CUT($myplex_auth:CUT:=CUT| =)}}{{CUT($sharedlibrariesview:CUT:=|Hide=CUT|Hide =)}}{{CUT($librariesview::Hide=|Grid=CUT|Paged Grid=CUT|Overview=CUT|Overview Paged=CUT|List=CUT)}}
+        </navigationItem>{{CUT($myplex_auth:CUT:=CUT| =)}}{{CUT($sharedlibrariesview:CUT:=|Hide=CUT|Hide =)}}
         
         <navigationItem id="Settings">
           <title>{{TEXT(Settings)}}</title>

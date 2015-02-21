@@ -220,7 +220,7 @@
         {{COPY(Server:@main/size::0=|1=COPY)}}
         <collectionDivider alignment="center" accessibilityLabel="Library">
             <title>{{VAL(name)}}{{VAL(local::0= &lt;{{TEXT(remote)}}&gt;|0 =)}}</title>
-        </collectionDivider>{{CUT($sectionsposition::Top=|Bottom=CUT|Flow=CUT|Middle=CUT)}}
+        </collectionDivider>
 
         <shelf id="shelf_0" columnCount="5">
             <sections>                             
