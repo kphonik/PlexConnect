@@ -77,16 +77,16 @@
               <menuSection>
              <header>
               <horizontalDivider alignment="left">
-                <title>{{TEXT(Shared Library)}}</title>
+                <title>{{TEXT(Shared Libraries)}}</title>
               </horizontalDivider>
             </header>
             <items>
                 <oneLineMenuItem id="SharedLibrariesView" onSelect="toggleSettings('SharedLibrariesView', 'Settings_Library')">
-                <label>{{TEXT(Library View)}}</label>
+                <label>{{TEXT(Shared Libraries View)}}</label>
                 <rightLabel>{{SETTING(sharedlibrariesview)}}</rightLabel>
               </oneLineMenuItem>
               <oneLineMenuItem id="SectionIcons_Shared" onSelect="toggleSettings('SectionIcons_Shared', 'Settings_Library')">
-                <label>{{TEXT(Shared Library Icons)}}</label>
+                <label>{{TEXT(Shared Libraries Icons)}}</label>
                 <rightLabel>{{SETTING(sectionicons_shared)}}</rightLabel>
               </oneLineMenuItem> 
                </items>
