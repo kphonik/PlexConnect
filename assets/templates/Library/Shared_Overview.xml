@@ -12,8 +12,7 @@
         {{VAR(sections:NoKey:FALSE)}}  <!--this sets the var to FALSE-->
         {{VAR(items:NoKey:FALSE)}}
         
-        <scroller id="Library_Grid">
-            
+        <scroller id="Library_Overview">           
             <header>
                 <imageHeader>
                     <image insets="0, 0, {{VAL(^aTVScreenResolution:1:720=630|1080=945)}}, 0" required="true">
@@ -56,7 +55,7 @@
                                         
                                         <title>{{VAL(title)}}</title>
                                         <image>{{URL(:/thumbnails/Plex/images/icons/{{VAL(type)}}.png)}}</image>{{CUT($sectionicons_all::Plex=CUT|Fanart=)}}
-                                        <image>{{IMAGEURL(thumb::768)}}</image>{{CUT($sectionicons_all::Plex=|Fanart=CUT)}}
+                                        <image>{{IMAGEURL(thumb::768)}}</image>{{CUT($sectionicons_shared::Plex=|Fanart=CUT)}}
                                         <defaultImage>resource://16X9.png</defaultImage>
                                         <!--badgeCount></badgeCount-->
                                     </moviePoster>

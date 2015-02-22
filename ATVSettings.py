@@ -24,7 +24,6 @@ options = { \
     'seasonview'                        :('Coverflow', 'Big Artwork', 'List'), \
     'sectionicons'                      :('Fanart', 'Plex', 'Custom'), \
     'sectionicons_shared'               :('Fanart', 'Plex'), \
-    'sectionicons_all'                  :('Fanart', 'Plex'), \
     'library_search'                    :('Hide', 'Show'), \
     'libraryremote_search'              :('Hide', 'Show'), \
     'library_ondeck'                    :('checked', 'unchecked'), \

@@ -8,7 +8,6 @@
   <body>
       {{ADDXML(OnDeck::/library/onDeck?X-Plex-Container-Start=0&amp;X-Plex-Container-Size=40)}}
       {{ADDXML(RecentlyAdded::/library/recentlyAdded?X-Plex-Container-Start=0&amp;X-Plex-Container-Size=40)}}
-      {{ADDXML(VideoChannels::/channels/all)}}
       {{VAR(items:NoKey:FALSE)}}
       {{VAR(sections:NoKey:FALSE)}}  <!--this sets the var to FALSE-->
 
@@ -55,10 +54,9 @@
                   {{COPY(Directory)}}
                   {{VAR(sections:NoKey:TRUE)}}  <!--within COPY this sets the var to TRUE-->
                   
-                    <title>{{VAL(title)}}</title>
-                    <image>{{IMAGEURL(art::768)}}</image>{{CUT($sectionicons_shared::Apple=|Plex=CUT|Fanart=CUT|Custom=CUT)}}
-                    <image>{{URL(:/thumbnails/Plex/images/icons/{{VAL(type)}}.png)}}</image>{{CUT($sectionicons_shared::Apple=CUT|Plex=CUT|Fanart=|Custom=CUT)}}
-                    <image>{{IMAGEURL(thumb::768)}}</image>{{CUT($sectionicons_shared::Apple=CUT|Plex=|Fanart=CUT|Custom=CUT)}}
+                    <title>{{VAL(title)}}</title>                    
+                    <image>{{URL(:/thumbnails/Plex/images/icons/{{VAL(type)}}.png)}}</image>{{CUT($sectionicons_shared::Plex=CUT|Fanart=|Custom=CUT)}}
+                    <image>{{IMAGEURL(thumb::768)}}</image>{{CUT($sectionicons_shared::Plex=|Fanart=CUT|Custom=CUT)}}
                     <defaultImage>resource://16X9.png</defaultImage>
                     <!--badgeCount></badgeCount-->
                   </moviePoster>
