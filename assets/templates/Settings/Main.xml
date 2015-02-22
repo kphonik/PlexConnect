@@ -62,13 +62,18 @@
                 <rightLabel>Plex Media Servers: {{PMSCOUNT()}}</rightLabel>
               </oneLineMenuItem>
               
-              <oneLineMenuItem id="MyPlexView" onSelect="atv.loadURL('{{URL(:/::PlexConnect=Settings_MyPlex)}}')">
-                <label>{{TEXT(MyPlex Account)}}</label>
+              <oneLineMenuItem id="MyPlexSignInOut" onSelect="myPlexSignInOut()">{{CUT($myplex_auth::=| =CUT)}}
+                <label>{{TEXT(MyPlex Sign In)}}</label>
+                <rightLabel></rightLabel>
                 <accessories>
                   <arrow/>
-                </accessories>                
+                </accessories>
               </oneLineMenuItem>
-              
+              <oneLineMenuItem id="MyPlexSignInOut" onSelect="myPlexSignInOut()">{{CUT($myplex_auth:CUT:=CUT| =)}}
+                <label>{{TEXT(MyPlex Sign Out)}}</label>
+                <rightLabel>{{SETTING(myplex_user)}}</rightLabel>
+                <accessories></accessories>
+              </oneLineMenuItem>
               <oneLineMenuItem id="PlexHomeUser" dimmed="true">{{CUT($myplex_auth::=| =CUT)}}
                 <label>{{TEXT(Switch Home User)}}</label>
                 <rightLabel></rightLabel>

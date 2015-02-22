@@ -46,7 +46,8 @@ function toggleSettings(opt, template)
 /*
  * update Settings
  */
-function toggleTemplateSettings(opt, template) {
+function toggleTemplateSettings(opt, template) 
+{
   // read new XML
   var url = "{{URL(/)}}&PlexConnect=SettingsToggle:"+ opt + "+" + template + "&PlexConnectUDID="+atv.device.udid;
   var req = new XMLHttpRequest();
@@ -54,22 +55,6 @@ function toggleTemplateSettings(opt, template) {
   req.send();
   atv.loadAndSwapURL("{{URL(/)}}&PlexConnect=" + template + "&PlexConnectUDID=" + atv.device.udid); 
 };
-/*
- * update Settings
- */
-
-function switchTemplate(defaultpath) {
-  var xml = (defaultpath ? "Settings" : "Settings_Main");
-  var url = "{{URL(/)}}&PlexConnect=SettingsToggle:template+"+xml+"&PlexConnectUDID="+atv.device.udid;
-  // read new XML
-  var req = new XMLHttpRequest();
-  req.open('GET', url, false);
-  req.send();
-  doc=req.responseXML;
-  
-  atv.loadAndSwapURL('{{URL(:/PlexConnect.xml)}}&PlexConnect=Settings&PlexConnectUDID=' + atv.device.udid);
-};
-
 
 function purgeFanart(opt, template) 
 {
@@ -105,30 +90,61 @@ function purgeFanart(opt, template)
  */
 function discover(opt, template) 
 {
+    gotDiscoverResponse = function(doc)
+    {
+        // request updated settings XML
+        var url = "{{URL(/)}}&PlexConnect="+ template + "&PlexConnectUDID="+atv.device.udid
+        var req = new XMLHttpRequest();
+        req.open('GET', url, false);
+        req.send();
+        doc = req.responseXML;
+        
+        // get "opt" element of fresh XML
+        var newval = doc.getElementById(opt).getElementByTagName("rightLabel");
+        if (!newval) return undefined;  // error - element not found
+        
+        // push new value to display, remove spinner
+        dispval.textContent = newval.textContent;
+        var elem_remove = elem.getElementByTagName("accessories").getElementByTagName("spinner");
+        if (elem_remove) elem_remove.removeFromParent();
+        log("discover done - "+newval.textContent);
+    }
+    
   // get "opt" element of displayed XML
-  var dispval = document.getElementById(opt).getElementByTagName("rightLabel");
+  var elem = document.getElementById(opt);
+  if (!elem) return undefined;  // error - element not found
+  var dispval = elem.getElementByTagName("rightLabel");
   if (!dispval) return undefined;  // error - element not found
+  
+  // clear number of PMSs, show spinner
+  dispval.textContent =  '';
+  if (!elem.getElementByTagName("accessories"))
+  {
+      var elem_add = document.makeElementNamed("accessories");
+      elem.appendChild(elem_add);
+  }
+  var elem_add = document.makeElementNamed("spinner");
+  elem.getElementByTagName("accessories").appendChild(elem_add);
   
   // discover - trigger PlexConnect, ignore response
   var url = "{{URL(/)}}&PlexConnect=Discover&PlexConnectUDID="+atv.device.udid
   var req = new XMLHttpRequest();
-  req.open('GET', url, false);
+  req.onreadystatechange = function()
+  {
+        try
+        {
+            if(req.readyState == 4)
+            {
+                gotDiscoverResponse(req.responseXML)
+            }
+        }
+        catch(e)
+        {
+            req.abort();
+        }
+  }
+  req.open('GET', url, true);
   req.send();
-  
-  // read new XML
-  var url = "{{URL(/)}}&PlexConnect="+ template + "&PlexConnectUDID="+atv.device.udid
-  var req = new XMLHttpRequest();
-  req.open('GET', url, false);
-  req.send();
-  doc=req.responseXML;
-  
-  // get "opt" element of fresh XML
-  var newval = doc.getElementById(opt).getElementByTagName("rightLabel");
-  if (!newval) return undefined;  // error - element not found
-  log("discover done - "+newval.textContent);
-    
-  // push new value to display
-  dispval.textContent = newval.textContent;
 };
 
 /*
