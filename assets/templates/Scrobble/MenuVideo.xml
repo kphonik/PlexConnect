@@ -61,7 +61,7 @@
             
             <oneLineMenuItem id="item4" onSelect="atv.loadURL('{{URL(Video/key:::PlexConnect=Artwork_ChangeFanArtVideo)}}')">
               <label>{{TEXT(Change {{VAL(Video/type::show=TV Show|season=Season|episode=Episode|movie=Movie)}} Fanart)}}</label>
-            </oneLineMenuItem>{{CUT(viewGroup::episode=CUT|season=CUT|movie=)}}
+            </oneLineMenuItem>
           </items>
         </menuSection>
       </sections> 
