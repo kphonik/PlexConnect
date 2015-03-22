@@ -22,8 +22,7 @@ options = { \
     'moviepreplay_bottomshelf'          :('Extras', 'Related Movies'), \
     'episodeview'                       :('List', 'Grid'), \
     'seasonview'                        :('Coverflow', 'Big Artwork', 'List'), \
-    'sectionicons'                      :('Fanart', 'Plex', 'Custom'), \
-    'sectionicons_shared'               :('Fanart', 'Plex'), \
+    'sectionicons'                      :('Fanart', 'Custom'), \
     'library_search'                    :('Hide', 'Show'), \
     'libraryremote_search'              :('Hide', 'Show'), \
     'library_ondeck'                    :('checked', 'unchecked'), \

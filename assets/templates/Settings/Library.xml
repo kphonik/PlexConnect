@@ -85,10 +85,6 @@
                 <label>{{TEXT(Shared Libraries View)}}</label>
                 <rightLabel>{{SETTING(sharedlibrariesview)}}</rightLabel>
               </oneLineMenuItem>
-              <oneLineMenuItem id="SectionIcons_Shared" onSelect="toggleSettings('SectionIcons_Shared', 'Settings_Library')">
-                <label>{{TEXT(Shared Libraries Icons)}}</label>
-                <rightLabel>{{SETTING(sectionicons_shared)}}</rightLabel>
-              </oneLineMenuItem> 
                </items>
               </menuSection>
                   
@@ -138,31 +134,7 @@
             </items>
           </menuSection>
           
-          <menuSection>
-            <header>
-              <horizontalDivider alignment="left">
-                <title>{{TEXT(Shared Libraries Extras)}}</title>
-              </horizontalDivider>
-            </header>
-            <items>
-
-              <oneLineMenuItem id="SharedLibrary_OnDeck" onSelect="toggleSettings('SharedLibrary_OnDeck', 'Settings_Library')">
-                <label>{{TEXT(On Deck)}}</label>
-                <accessories>
-                  <checkMark/>
-                </accessories>{{CUT($sharedlibrary_ondeck::unchecked=CUT|checked=)}}
-              </oneLineMenuItem>
-
-              <oneLineMenuItem id="SharedLibrary_RecentlyAdded" onSelect="toggleSettings('SharedLibrary_RecentlyAdded', 'Settings_Library')">
-                <label>{{TEXT(Recently Added)}}</label>
-                <accessories>
-                  <checkMark/>
-                </accessories>{{CUT($sharedlibrary_recentlyadded::unchecked=CUT|checked=)}}
-              </oneLineMenuItem>      
-                    
-              
-            </items>
-          </menuSection>
+          
         </sections>
       </menu>
     </itemCollectionWithImageHeader>

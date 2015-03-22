@@ -64,21 +64,6 @@
             {{VAR(searchKey:searchKey)}}
             {{COPY(Directory)}}
             {{VAR(items:NoKey:TRUE)}}
-            <image>
-              {{URL(:/fanartcache/{{getBackground({{EVAL({\
-              'template'    : 'Plex',\
-              'title'       : "{{VAL(title)}}",\
-              'image'       : "{{IMAGEURL(thumb::768)}}",\
-              'resolution'  : "square",\
-              'font'        : "fonts/OpenSans/OpenSans-Light.ttf",\
-              'titleSize'   : "40",\
-              'anchorX'     : "center",\
-              'anchorY'     : "top",\
-              'offsetX'     : "0",\
-              'offsetY'     : "5",\
-              'layers'      : ["FlowIconSquare"]\
-              })}})}})}}
-            </image>{{CUT($sectionicons::Plex=|Fanart=CUT|Custom=CUT)}}
              <image>
                  {{URL(:/fanartcache/{{getBackground({{EVAL({\
                  'template'    : 'Plex',\
@@ -117,22 +102,6 @@
           <showcasePoster id="{{VAL(searchKey)}}" accessibilityLabel="{{TEXT(Search)}}"
                           onPlay="atv.loadURL('{{URL(searchKey)}}')"
                           onSelect="atv.loadURL('{{URL(searchKey)}}')">
-                          <image>
-                              {{URL(:/fanartcache/{{getBackground({{EVAL({\
-                              'template'    : 'Plex',\
-                              'title'       : "{{TEXT(Search)}}",\
-                              'image'       : "icons/plexsearch.png",\
-                              'resolution'  : "square",\
-                              'font'        : "fonts/OpenSans/OpenSans-Light.ttf",\
-                              'titleSize'   : "40",\
-                              'anchorX'     : "center",\
-                              'anchorY'     : "top",\
-                              'offsetX'     : "0",\
-                              'offsetY'     : "5",\
-                              'layers'      : ["FlowIconSquare"]\
-                              })}})}})}}
-                          </image>{{CUT($sectionicons::Plex=|Fanart=CUT|Custom=CUT)}}
-                          
                           <image>
                               {{URL(:/fanartcache/{{getBackground({{EVAL({\
                               'template'    : 'Plex',\
@@ -193,9 +162,7 @@
                   {{VAR(sections:NoKey:TRUE)}}  <!--within COPY this sets the var to TRUE-->
                   
                     <title>{{VAL(title)}}</title>
-                    <image>{{IMAGEURL(art::768)}}</image>{{CUT($sectionicons::Plex=CUT|Fanart=CUT|Custom=CUT)}}
                     <image>{{URL(:/thumbnails/Plex/images/icons/{{VAL(type)}}.png)}}</image>{{CUT($sectionicons::Plex=CUT|Fanart=|Custom=CUT)}}
-                    <image>{{IMAGEURL(thumb::768)}}</image>{{CUT($sectionicons::Plex=|Fanart=CUT|Custom=CUT)}}
                     <image>{{URL(:/thumbnails/Plex/images/custom/top/{{EVAL("{{VAL(title)}}".replace(' ', ''))}}.png)}}</image>{{CUT($sectionicons::Plex=CUT|Fanart=CUT|Custom=)}}
                     <defaultImage>resource://16X9.png</defaultImage>
                     <!--badgeCount></badgeCount-->

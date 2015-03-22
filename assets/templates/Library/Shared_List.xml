@@ -38,8 +38,7 @@
             </header>{{CUT(@main/size:CUT:0=CUT|1=CUT|2=)}}
             
             <items>
-                
-                <!-- /library/sections -->
+              <!-- /library/sections -->
               <oneLineMenuItem id="{{VAL(key)}}"
                                        onPlay="atv.loadURL('{{URL(key:::PlexConnect={{EVAL('{{VAL(scanner)}}'.replace(' ', '_'))}})}}')"
                                        onSelect="atv.loadURL('{{URL(key:::PlexConnect={{EVAL('{{VAL(scanner)}}'.replace(' ', '_'))}})}}')"
@@ -53,21 +52,6 @@
                 </preview>
               </oneLineMenuItem>
               
-              <!--OnDeck -->
-              <oneLineMenuItem id="{{VAL(ondeck)}}"
-                                       onPlay="atv.loadURL('{{URL(:/PMS(shared)/library/onDeck)}}&amp;PlexConnect=Library_Library_OnDeck')"
-                                       onSelect="atv.loadURL('{{URL(:/PMS(shared)/library/onDeck)}}&amp;PlexConnect=Library_Library_OnDeck')">
-               <label>{{TEXT(On Deck)}}</label>
-              </oneLineMenuItem>{{CUT($library_ondeck::checked=|unchecked=CUT)}}             
-                              
-              <!-- Recently Added -->
-              <oneLineMenuItem id="{{VAL(recentlyadded)}}"
-                                       onPlay="atv.loadURL('{{URL(:/PMS(shared)/library/recentylAdded)}}&amp;PlexConnect=Library_Library_RecentlyAdded')"
-                                       onSelect="atv.loadURL('{{URL(:/PMS(shared)/library/recentylAdded)}}&amp;PlexConnect=Library_Library_RecentlyAdded')">
-                <label>{{TEXT(Recently Added)}}</label>
-              </oneLineMenuItem>{{CUT($library_recentlyadded::checked=|unchecked=CUT)}}              
-                              
-                
               <!-- search -->
               <oneLineMenuItem id="{{VAL(searchKey)}}"
                                        onPlay="atv.loadURL('{{URL(searchKey)}}')"
@@ -76,12 +60,12 @@
                 <accessories><arrow/></accessories>
               </oneLineMenuItem>
               
-              </items>
+            </items>
           </menuSection>
         
         </sections>
       </menu>
-    </itemCollectionWithImageHeader>{{CUT(#sections::FALSE=CUT|TRUE=)}}
+    </itemCollectionWithImageHeader>{{CUT(#sections::FALSE=CUT|TRUE=)}}  <!--CUT if no section added-->
     
     <!--No Sections Available-->
     <dialog id="com.sample.error-dialog">
