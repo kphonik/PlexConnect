@@ -19,7 +19,7 @@ import unicodedata
 from Debug import *
 
 try:
-    from PIL import Image
+    from PIL import Image, ImageFilter, ImageFont, ImageDraw
     __isPILinstalled = True
 except ImportError:
     dprint(__name__, 0, "No PIL/Pillow installation found.")
@@ -312,10 +312,10 @@ def generate(PMS_uuid, url, authtoken, resolution, blurRadius, gradientTemplate,
     if id:
         # assumes URL in format "/library/metadata/<ratingKey>/art/fileId>"
         id = id.groupdict()
-        cachefile = urllib.quote_plus(PMS_uuid +"_"+ id['ratingKey'] +"_"+ id['fileId'] +"_"+ resolution +"_"+ blurRadius) + titleText + subtitleText + gradientTemplate + ".jpg"
+        cachefile = urllib.quote_plus(PMS_uuid +"_"+ id['ratingKey'] +"_"+ id['fileId'] +"_"+ resolution +"_"+ blurRadius) + titleText + subtitleText + gradientTemplate + ".png"
     else:
         fileid = posixpath.basename(urlparse.urlparse(url).path)
-        cachefile = urllib.quote_plus(PMS_uuid +"_"+ fileid +"_"+ resolution +"_"+ blurRadius) + titleText + subtitleText + gradientTemplate + ".jpg"  # quote: just to make sure...
+        cachefile = urllib.quote_plus(PMS_uuid +"_"+ fileid +"_"+ resolution +"_"+ blurRadius) + titleText + subtitleText + gradientTemplate + ".png"  # quote: just to make sure...
     
     # Already created?
     dprint(__name__, 1, 'Check for Cachefile.')  # Debug

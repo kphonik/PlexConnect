@@ -87,6 +87,37 @@
               </oneLineMenuItem>
                </items>
               </menuSection>
+              
+              <menuSection>
+           <header>
+              <horizontalDivider alignment="left">
+                <title>{{TEXT(PlayLists)}}</title>
+              </horizontalDivider>
+            </header>
+            <items>
+            <oneLineMenuItem id="PlayListsView" onSelect="toggleSettings('PlayListsView', 'Settings_PlayList')">
+                <label>{{TEXT(Playlists View)}}</label>
+                <rightLabel>{{SETTING(playlistsview)}}</rightLabel>
+              </oneLineMenuItem>   
+            </items>
+          </menuSection>
+          <menuSection>
+           <header>
+              <horizontalDivider alignment="left">
+                <title>{{TEXT(Channels)}}</title>
+              </horizontalDivider>
+            </header>
+            <items>
+            <oneLineMenuItem id="ChannelView" onSelect="toggleSettings('ChannelView', 'Settings_Channels')">
+                <label>{{TEXT(Channels View)}}</label>
+                <rightLabel>{{SETTING(channelview)}}</rightLabel>
+              </oneLineMenuItem>   
+              <oneLineMenuItem id="ShowTitles_Channels" onSelect="toggleSettings('ShowTitles_Channels', 'Settings_Channels')">
+                <label>{{TEXT(Channel Titles)}}</label>
+                <rightLabel>{{SETTING(showtitles_channels)}}</rightLabel>
+              </oneLineMenuItem>
+            </items>
+          </menuSection>
                   
               <menuSection>
            <header>

@@ -66,12 +66,7 @@
                 </accessories>
               </oneLineMenuItem>
               
-              <oneLineMenuItem id="PlayListView" onSelect="atv.loadURL('{{URL(:/::PlexConnect=Settings_PlayList)}}')">
-                <label>{{TEXT(Playlists Options)}}</label>
-                <accessories>
-                  <arrow/>
-                </accessories>
-              </oneLineMenuItem>
+        
 
               
               <oneLineMenuItem id="MovieView" onSelect="atv.loadURL('{{URL(:/::PlexConnect=Settings_Movies)}}')">
@@ -80,6 +75,7 @@
                   <arrow/>
                 </accessories>
               </oneLineMenuItem>
+              
               <oneLineMenuItem id="MusicView" onSelect="atv.loadURL('{{URL(:/::PlexConnect=Settings_Music)}}')">
                 <label>{{TEXT(Music Options)}}</label>
                 <accessories>
@@ -93,12 +89,7 @@
                   <arrow/>
                 </accessories>
               </oneLineMenuItem>
-              <oneLineMenuItem id="ChannelView" onSelect="atv.loadURL('{{URL(:/::PlexConnect=Settings_Channels)}}')">
-                <label>{{TEXT(Channels Options)}}</label>
-                <accessories>
-                  <arrow/>
-                </accessories>
-              </oneLineMenuItem>
+              
               <oneLineMenuItem id="HomevideoView" onSelect="atv.loadURL('{{URL(:/::PlexConnect=Settings_HomeVideos)}}')">
                 <label>{{TEXT(Home Video Options)}}</label>
                 <accessories>

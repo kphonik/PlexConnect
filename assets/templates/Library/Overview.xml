@@ -33,12 +33,12 @@
            <image insets="0, 0, {{VAL(^aTVScreenResolution:1:720=630|1080=905)}}, 0" required="true">
                {{URL(:/fanartcache/{{getBackground({{EVAL({\
                'template'    : 'Plex',\
-               'title'       : "{{EVAL(quote_plus("{{TEXT(Library)}}"))}}",\
-               'image'       : "backgrounds/plex{{VAL($menubackground::Default=default|Grey=grey|Plex Orange=orange|Apple Blue=blue|Green=green)}}.png",\
+               'title'       : "{{EVAL(quote_plus("{{VAL(name)}}{{VAL(local::0=|0 =)}}}"))}}",\
+               'image'       : "backgrounds/Library.png",\
                'resolution'  : "{{VAL(^aTVScreenResolution)}}",\
                'font'        : "fonts/OpenSans/OpenSans-Light.ttf",\
                'titleColor'  : "{{VAL($titlecolor::White=fafafa|Grey=878787|Plex Orange=ff8800|Apple Blue=1357d4)}}",\
-               'layers'      : ["PlexLibraryFlow{{VAL($gridtint::On=Text|Off=)}}"]\
+               'layers'      : ["PlexLibraryFlow{{VAL($fanarttint::On=Text|Off=)}}"]\
                })}})}})}}
            </image>
 	   </imageHeader>{{CUT($sectionsposition::Top=CUT|Flow=))}}
