@@ -33,7 +33,7 @@
            <image insets="0, 0, {{VAL(^aTVScreenResolution:1:720=630|1080=905)}}, 0" required="true">
                {{URL(:/fanartcache/{{getBackground({{EVAL({\
                'template'    : 'Plex',\
-               'title'       : "{{EVAL(quote_plus("{{VAL(name)}}{{VAL(local::0=|0 =)}}"))}}",\
+               'title'       : "{{EVAL(quote_plus("{{PMSNAME()}}"))}}",\
                'image'       : "backgrounds/Library.png",\
                'resolution'  : "{{VAL(^aTVScreenResolution)}}",\
                'font'        : "fonts/OpenSans/OpenSans-Light.ttf",\
