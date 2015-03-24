@@ -84,6 +84,21 @@
             </items>
           </menuSection>
           
+          <menuSection>
+            <header>
+              <horizontalDivider alignment="left">
+                <title>{{TEXT(TVShow Extras)}}</title>
+              </horizontalDivider>
+            </header>       
+          
+            <items>         
+              <oneLineMenuItem id="ShowPrePlay_Settings" onSelect="toggleSettings('ShowPrePlay_Settings', 'Settings_TVShows')">
+                <label>{{TEXT(PrePlay Settings Button)}}</label>
+                <rightLabel>{{SETTING(showpreplay_settings)}}</rightLabel>
+              </oneLineMenuItem>
+              </items>
+          </menuSection>
+          
 
           <menuSection>
             <header>

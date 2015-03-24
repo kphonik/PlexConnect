@@ -19,6 +19,8 @@ options = { \
     'homevideoview'                     :('Grid', 'List', 'Detailed List'), \
     'showview'                          :('Big Artwork', 'Grid', 'List', 'Bookcase'), \
     'movie_extras'                      :('Show', 'Hide'), \
+    'moviepreplay_settings'             :('Show', 'Hide'), \
+    'showpreplay_settings'              :('Show', 'Hide'), \
     'moviepreplay_bottomshelf'          :('Extras', 'Related Movies'), \
     'episodeview'                       :('List', 'Grid'), \
     'seasonview'                        :('Coverflow', 'Big Artwork', 'List'), \

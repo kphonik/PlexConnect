@@ -162,7 +162,7 @@
                   <title>{{TEXT(Settings)}}</title>
                   <image>resource://WishList.png</image>
                   <focusedImage>resource://WishListFocused.png</focusedImage>
-                </actionButton>
+                </actionButton>{{CUT($moviepreplay_settings::Hide=CUT|Show=)}}
                 
                 <actionButton id="more" accessibilityLabel="More info" onSelect="atv.showMoreInfo();" onPlay="atv.showMoreInfo();">
                   <title>{{TEXT(More)}}</title>
