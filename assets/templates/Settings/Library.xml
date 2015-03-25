@@ -70,7 +70,11 @@
               <oneLineMenuItem id="SectionIcons" onSelect="toggleSettings('SectionIcons', 'Settings_Library')">
                 <label>{{TEXT(Library Icons)}}</label>
                 <rightLabel>{{SETTING(sectionicons)}}</rightLabel>
-              </oneLineMenuItem>             
+              </oneLineMenuItem>
+              <oneLineMenuItem id="LibraryFanart" onSelect="toggleSettings('LibraryFanart', 'Settings_Library')">
+                <label>{{TEXT(Library Fanart)}}</label>
+                <rightLabel>{{SETTING(libraryfanart)}}</rightLabel>
+              </oneLineMenuItem>
               </items>
               </menuSection>
               

@@ -25,6 +25,7 @@ options = { \
     'episodeview'                       :('List', 'Grid'), \
     'seasonview'                        :('Coverflow', 'Big Artwork', 'List'), \
     'sectionicons'                      :('Fanart', 'Custom'), \
+    'libraryfanart'                     :('Show', 'Hide'), \
     'library_search'                    :('Hide', 'Show'), \
     'libraryremote_search'              :('Hide', 'Show'), \
     'library_ondeck'                    :('checked', 'unchecked'), \
