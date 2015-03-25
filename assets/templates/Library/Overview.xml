@@ -9,6 +9,7 @@
   <body>
       {{ADDXML(OnDeck::/library/onDeck?X-Plex-Container-Start=0&amp;X-Plex-Container-Size=40)}}      
       {{ADDXML(RecentlyAdded::/library/recentlyAdded?X-Plex-Container-Start=0&amp;X-Plex-Container-Size=40)}}
+      {{ADDXML(recentlyAdded::/library/sections/{{VAL(librarySectionID)}}/recentlyAdded?X-Plex-Container-Start=0&amp;X-Plex-Container-Size=20)}}
       {{VAR(sections:NoKey:FALSE)}}  <!--this sets the var to FALSE-->
       {{VAR(items:NoKey:FALSE)}}
 
@@ -49,7 +50,7 @@
                'template'    : 'Plex',\
                'title'       : "{{SETTING(plexhome_user)}}",\
                'image'       : "backgrounds/plex{{VAL($menubackground::Default=default|Grey=grey|Plex Orange=orange|Apple Blue=blue|Green=green)}}.png",\
-               'resolution'  : "{{VAL(^aTVScreenResolution)}}",\          
+               'resolution'  : "{{VAL(^aTVScreenResolution)}}",\
                'font'        : "fonts/OpenSans/OpenSans-Light.ttf",\
                'titleColor'  : "{{VAL($titlecolor::White=fafafa|Grey=878787|Plex Orange=ff8800|Apple Blue=1357d4)}}",\
                'layers'      : ["PlexLibraryFlow{{VAL($gridtint::On=Text|Off=)}}"]\
@@ -63,7 +64,7 @@
                'template'    : 'Plex',\
                'title'       : "{{SETTING(plexhome_user)}}",\
                'image'       : "backgrounds/Library.png",\
-               'resolution'  : "{{VAL(^aTVScreenResolution)}}",\          
+               'resolution'  : "{{VAL(^aTVScreenResolution)}}",\
                'font'        : "fonts/OpenSans/OpenSans-Light.ttf",\
                'titleColor'  : "{{VAL($titlecolor::White=fafafa|Grey=878787|Plex Orange=ff8800|Apple Blue=1357d4)}}",\
                'layers'      : ["PlexLibraryFlow{{VAL($fanarttint::On=Text|Off=)}}"]\
