@@ -98,6 +98,22 @@
                  {{URL(:/fanartcache/{{getBackground({{EVAL({\
                  'template'    : 'Plex',\
                  'title'       : "{{VAL(title)}}",\
+                 'image'       : "flow/{{VAL(type)}}-flow.png",\
+                 'resolution'  : "flow",\
+                 'font'        : "fonts/OpenSans/OpenSans-Light.ttf",\
+                 'titleSize'   : "40",\
+                 'anchorX'     : "center",\
+                 'anchorY'     : "bottom",\
+                 'offsetX'     : "0",\
+                 'offsetY'     : "50",\
+                 'layers'      : ["FlowIconFanart"]\
+                 })}})}})}}
+            </image>{{CUT($sectionicons::Basic=|Fanart=CUT|Custom=CUT)}}
+            
+            <image>
+                 {{URL(:/fanartcache/{{getBackground({{EVAL({\
+                 'template'    : 'Plex',\
+                 'title'       : "{{VAL(title)}}",\
                  'image'       : "flow/{{VAL(type)}}-flow-plex.png",\
                  'resolution'  : "flow",\
                  'font'        : "fonts/OpenSans/OpenSans-Light.ttf",\
@@ -108,7 +124,7 @@
                  'offsetY'     : "50",\
                  'layers'      : ["FlowIconFanart"]\
                  })}})}})}}
-            </image>{{CUT($sectionicons::Plex=CUT|Fanart=|Custom=CUT)}}
+            </image>{{CUT($sectionicons::Basic=CUT|Fanart=|Custom=CUT)}}
              <image>
                  {{URL(:/fanartcache/{{getBackground({{EVAL({\
                  'template'    : 'Plex',\
@@ -123,7 +139,7 @@
                  'offsetY'     : "50",\
                  'layers'      : ["FlowIconCostum"]\
                  })}})}})}}
-            </image>{{CUT($sectionicons::Plex=CUT|Fanart=CUT|Custom=)}}
+            </image>{{CUT($sectionicons::Basic=CUT|Fanart=CUT|Custom=)}}
            
 
             <defaultImage>resource://Poster.png</defaultImage>
@@ -146,22 +162,8 @@
                               'offsetY'     : "50",\
                               'layers'      : ["FlowIconFanart"]\
                               })}})}})}}
-                          </image>{{CUT($sectionicons::Plex=CUT|Fanart=|Custom=CUT)}}
-                          <image>
-                             {{URL(:/fanartcache/{{getBackground({{EVAL({\
-                              'template'    : 'Plex',\
-                              'title'       : "{{TEXT(Search)}}",\
-                              'image'       : "icons/search-flow.png",\
-                              'resolution'  : "flow",\
-                              'font'        : "fonts/OpenSans/OpenSans-Light.ttf",\
-                              'titleSize'   : "40",\
-                              'anchorX'     : "center",\
-                              'anchorY'     : "bottom",\
-                              'offsetX'     : "0",\
-                              'offsetY'     : "50",\
-                              'layers'      : ["FlowIconCostum"]\
-                              })}})}})}}
-                        </image>{{CUT($sectionicons::Plex=CUT|Fanart=CUT|Custom=)}}
+                          </image>
+                         
             <defaultImage>resource://Poster.png</defaultImage>            
           </showcasePoster>{{CUT($library_search::Show=|Hide=CUT)}} 
         </items>
@@ -192,8 +194,9 @@
                   {{VAR(sections:NoKey:TRUE)}}  <!--within COPY this sets the var to TRUE-->
                   
                     <title>{{VAL(title)}}</title>
-                    <image>{{URL(:/thumbnails/Plex/images/icons/{{VAL(type)}}.png)}}</image>{{CUT($sectionicons::Plex=CUT|Fanart=|Custom=CUT)}}
-                    <image>{{URL(:/thumbnails/Plex/images/custom/top/{{EVAL("{{VAL(title)}}".replace(' ', ''))}}.png)}}</image>{{CUT($sectionicons::Plex=CUT|Fanart=CUT|Custom=)}}
+                    <image>{{URL(:/thumbnails/Plex/images/top/{{VAL(type)}}.png)}}</image>{{CUT($sectionicons::Basic=|Fanart=CUT|Custom=CUT)}}
+                    <image>{{URL(:/thumbnails/Plex/images/top/{{VAL(type)}}-plex.png)}}</image>{{CUT($sectionicons::Basic=CUT|Fanart=|Custom=CUT)}}
+                    <image>{{URL(:/thumbnails/Plex/images/custom/top/{{EVAL("{{VAL(title)}}".replace(' ', ''))}}.png)}}</image>{{CUT($sectionicons::Basic=CUT|Fanart=CUT|Custom=)}}
                     <defaultImage>resource://16X9.png</defaultImage>
                     <!--badgeCount></badgeCount-->
                   </moviePoster>
@@ -203,7 +206,7 @@
                                onPlay="atv.loadURL('{{URL(searchKey)}}')"
                                onSelect="atv.loadURL('{{URL(searchKey)}}')">
                     <title>{{TEXT(Search)}}</title>
-                    <image>{{URL(:/thumbnails/Plex/images/icons/search.png)}}</image>
+                    <image>{{URL(:/thumbnails/Plex/images/top/search.png)}}</image>
                     <defaultImage>resource://16X9.png</defaultImage>
                   </moviePoster>{{CUT($library_search::Show=|Hide=CUT)}} 
                   

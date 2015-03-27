@@ -24,7 +24,8 @@ options = { \
     'moviepreplay_bottomshelf'          :('Extras', 'Related Movies'), \
     'episodeview'                       :('List', 'Grid'), \
     'seasonview'                        :('Coverflow', 'Big Artwork', 'List'), \
-    'sectionicons'                      :('Fanart', 'Custom'), \
+    'sectionicons'                      :('Basic', 'Fanart', 'Custom'), \
+    'shared_sectionicons'               :('Basic', 'Fanart'), \
     'libraryfanart'                     :('Show', 'Hide'), \
     'library_search'                    :('Hide', 'Show'), \
     'libraryremote_search'              :('Hide', 'Show'), \

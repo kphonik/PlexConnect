@@ -89,6 +89,10 @@
                 <label>{{TEXT(Shared Libraries View)}}</label>
                 <rightLabel>{{SETTING(sharedlibrariesview)}}</rightLabel>
               </oneLineMenuItem>
+              <oneLineMenuItem id="Shared_SectionIcons" onSelect="toggleSettings('Shared_SectionIcons', 'Settings_Library')">
+                <label>{{TEXT(Shared Libraries Icons)}}</label>
+                <rightLabel>{{SETTING(shared_sectionicons)}}</rightLabel>
+              </oneLineMenuItem>
                </items>
               </menuSection>
               

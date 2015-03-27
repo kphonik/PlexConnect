@@ -70,7 +70,8 @@
                   {{VAR(sections:NoKey:TRUE)}}  <!--within COPY this sets the var to TRUE-->
                   
                     <title>{{VAL(title)}}</title>                    
-                    <image>{{URL(:/thumbnails/Plex/images/icons/{{VAL(type)}}.png)}}</image>
+                    <image>{{URL(:/thumbnails/Plex/images/top/{{VAL(type)}}.png)}}</image>{{CUT($shared_sectionicons::Basic=|Fanart=CUT|Custom=CUT)}}
+                    <image>{{URL(:/thumbnails/Plex/images/top/{{VAL(type)}}-plex.png)}}</image>{{CUT($shared_sectionicons::Basic=CUT|Fanart=|Custom=CUT)}}
                     <defaultImage>resource://16X9.png</defaultImage>
                     <!--badgeCount></badgeCount-->
                   </moviePoster>
@@ -80,7 +81,7 @@
                                onPlay="atv.loadURL('{{URL(searchKey)}}')"
                                onSelect="atv.loadURL('{{URL(searchKey)}}')">
                     <title>{{TEXT(Search)}}</title>
-                    <image>{{URL(:/thumbnails/Plex/images/icons/search.png)}}</image>
+                    <image>{{URL(:/thumbnails/Plex/images/top/search.png)}}</image>
                     <defaultImage>resource://16X9.png</defaultImage>
                   </moviePoster>{{CUT($library_search::Show=|Hide=CUT)}} 
                   
