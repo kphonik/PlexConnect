@@ -21,7 +21,21 @@
               'layers'      : ["PlexList{{VAL($paradelisttint::On=Text|Off=)}}"]\
               })}})}})}}
               </image>
-	    </imageHeader>
+	    </imageHeader>{{CUT($libraryfanart::Show=CUT|Hide=))}}
+	    
+	    <imageHeader>
+	      <image insets="0, 0, {{VAL(^aTVScreenResolution:1:720=552|1080=828)}}, 0" required="true">
+	    {{URL(:/fanartcache/{{getBackground({{EVAL({\
+              'template'    : 'Plex',\
+              'title'       : "{{SETTING(plexhome_user)}}",\
+              'image'       : "backgrounds/Library.png",\
+              'resolution'  : "{{VAL(^aTVScreenResolution)}}",\
+              'font'        : "fonts/OpenSans/OpenSans-Light.ttf",\
+              'titleColor'  : "{{VAL($titlecolor::White=fafafa|Grey=878787|Plex Orange=ff8800|Apple Blue=1357d4)}}",\
+              'layers'      : ["PlexList{{VAL($fanarttint::On=Text|Off=)}}"]\
+              })}})}})}}
+              </image>
+	    </imageHeader>{{CUT($libraryfanart::Show=|Hide=CUT))}}
       </header>
            
       <menu>

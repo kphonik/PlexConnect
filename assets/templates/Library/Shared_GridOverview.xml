@@ -63,8 +63,8 @@
                   {{VAR(searchKey:searchKey)}}
                   <moviePoster id="{{VAL(key)}}" accessibilityLabel="{{VAL(title)}}" featured="true" 
                                alwaysShowTitles="{{VAL($sectionicons::Apple=true|Plex=true|Fanart=true)}}"
-                               onPlay="atv.loadURL('{{URL(key:::PlexConnect={{EVAL('{{VAL(scanner)}}'.replace(' ', '_'))}})}}')"
-                               onSelect="atv.loadURL('{{URL(key:::PlexConnect={{EVAL('{{VAL(scanner)}}'.replace(' ', '_'))}})}}')"
+                               onPlay="atv.loadURL('{{URL(key)}}{{VAL(scanner::Plex Video Files Scanner=/folder|=/all)}}&amp;PlexConnect={{EVAL('{{VAL(scanner)}}'.replace(' ', '_'))}}_Overview')"
+                        onSelect="atv.loadURL('{{URL(key)}}{{VAL(scanner::Plex Video Files Scanner=/folder|=/all)}}&amp;PlexConnect={{EVAL('{{VAL(scanner)}}'.replace(' ', '_'))}}_Overview')"
                                onHoldSelect="sectionHoldSelect('{{VAL(key)}}', '{{URL(#searchKey)}}', '{{VAL(#serverName)}}', '{{URL(refreshKey)}}', '{{VAL(title)}}')">
                   {{COPY(Directory)}}
                   {{VAR(sections:NoKey:TRUE)}}  <!--within COPY this sets the var to TRUE-->

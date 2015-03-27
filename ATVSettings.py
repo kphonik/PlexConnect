@@ -11,8 +11,8 @@ from Debug import *  # dprint()
 
 options = { \
     'playlistsview'                     :('List', 'Tabbed List', 'Hide'), \
-    'libraryview'                       :('Overview', 'Grid', 'List', 'Hide'), \
-    'sharedlibrariesview'               :('Overview', 'List', 'Grid', 'Hide'), \
+    'libraryview'                       :('List Overview', 'Grid Overview', 'List', 'Grid', 'Hide'), \
+    'sharedlibrariesview'               :('List Overview', 'Grid Overview', 'List', 'Grid', 'Hide'), \
     'channelview'                       :('Grid', 'List', 'Tabbed List', 'Hide'), \
     'sectionsposition'                  :('Flow', 'Top'), \
     'movieview'                         :('Big Artwork', 'Grid', 'List', 'Detailed List'), \
@@ -30,6 +30,8 @@ options = { \
     'libraryremote_search'              :('Hide', 'Show'), \
     'library_ondeck'                    :('checked', 'unchecked'), \
     'library_recentlyadded'             :('checked', 'unchecked'), \
+    'sharedlibrary_ondeck'              :('checked', 'unchecked'), \
+    'sharedlibrary_recentlyadded'       :('checked', 'unchecked'), \
     'showtitles_library'                :('Show All', 'Highlighted Only'), \
     'actorview'                         :('Movies', 'Portrait'), \
     'flattenseason'                     :('False', 'True'), \
