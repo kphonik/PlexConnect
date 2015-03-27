@@ -51,7 +51,7 @@
               <horizontalDivider alignment="left">
                 <title>{{VAL(name)}}{{VAL(local::0= &lt;{{TEXT(remote)}}&gt;|0 =)}}</title>
               </horizontalDivider>
-            </header>{{CUT(@main/size:CUT:0=CUT|1=CUT|2=)}}
+            </header>{{CUT(@main/size:CUT:0=CUT|1=|2=)}}
             
             <items>
               <!-- /library/sections -->
