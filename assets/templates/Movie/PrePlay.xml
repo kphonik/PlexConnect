@@ -43,9 +43,6 @@
 
       <rating>{{contentRating(Video/contentRating)}}</rating>
       <summary>{{VAL(Video/summary)}}</summary>
-      
-      <mediaBadges />{{MEDIABADGES(Video/Media)}}{{CUT(^aTVFirmwareVersion::=CUT|6=)}}
-      
       <image style="moviePoster">{{IMAGEURL(Video/thumb::768)}}</image>
       <defaultImage>resource://Poster.png</defaultImage>
 
