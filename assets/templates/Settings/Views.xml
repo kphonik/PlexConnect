@@ -13,12 +13,12 @@
               'template'     : "plex",\
               'title'        : "{{EVAL(quote_plus("{{TEXT(Settings)}}"))}}",\
               'subtitle'     : "{{EVAL(quote_plus("{{TEXT(Section Options)}}"))}}",\
-              'image'        : "backgrounds/plex{{VAL($menubackground::Grey=default|Plex Orange=orange|Apple Blue=blue|Green=green)}}.png",\
+              'image'        : "backgrounds/plex{{VAL($menubackground::Default=default|Grey=grey|Plex Orange=orange|Apple Blue=blue|Green=green)}}.png",\
               'resolution'   : "{{VAL(^aTVScreenResolution)}}",\
               'font'         : "fonts/OpenSans/OpenSans-Light.ttf",\
               'titleColor'   : "{{VAL($titlecolor::White=fafafa|Grey=878787|Plex Orange=ff8800|Apple Blue=1357d4)}}",\
               'subtitleColor' : "{{VAL($subtitlecolor::White=fafafa|Grey=878787|Plex Orange=ff8800|Apple Blue=1357d4)}}",\
-              'layers'       : ["PlexSubList{{VAL($listtint::On=Text|Off=)}}"{{VAL($menuhint::On=,"PlexPressMenu_{{VAL($subtitlecolor::White=white|Plex Orange=orange|Apple Blue=blue|Grey=grey)}}"|Off=)}}]\
+              'layers'       : ["PlexSubList{{VAL($listtint::On=Text|Off=)}}"]\
               })}})}})}}
           </image>
         </imageHeader>
@@ -57,12 +57,7 @@
           <menuSection>
             <items>
             
-              <oneLineMenuItem id="Top Level" onSelect="atv.loadURL('{{URL(:/::PlexConnect=Settings_TopLevel)}}')">
-                <label>{{TEXT(Top Level Options)}}</label>
-                <accessories>
-                  <arrow/>
-                </accessories>
-                </oneLineMenuItem>
+              
               
               <oneLineMenuItem id="LibraryView" onSelect="atv.loadURL('{{URL(:/::PlexConnect=Settings_Library)}}')">
                 <label>{{TEXT(Library Options)}}</label>
@@ -71,12 +66,7 @@
                 </accessories>
               </oneLineMenuItem>
               
-              <oneLineMenuItem id="PlayListView" onSelect="atv.loadURL('{{URL(:/::PlexConnect=Settings_PlayList)}}')">
-                <label>{{TEXT(Playlists Options)}}</label>
-                <accessories>
-                  <arrow/>
-                </accessories>
-              </oneLineMenuItem>
+        
 
               
               <oneLineMenuItem id="MovieView" onSelect="atv.loadURL('{{URL(:/::PlexConnect=Settings_Movies)}}')">
@@ -85,6 +75,7 @@
                   <arrow/>
                 </accessories>
               </oneLineMenuItem>
+              
               <oneLineMenuItem id="MusicView" onSelect="atv.loadURL('{{URL(:/::PlexConnect=Settings_Music)}}')">
                 <label>{{TEXT(Music Options)}}</label>
                 <accessories>
@@ -98,12 +89,7 @@
                   <arrow/>
                 </accessories>
               </oneLineMenuItem>
-              <oneLineMenuItem id="ChannelView" onSelect="atv.loadURL('{{URL(:/::PlexConnect=Settings_Channels)}}')">
-                <label>{{TEXT(Channels Options)}}</label>
-                <accessories>
-                  <arrow/>
-                </accessories>
-              </oneLineMenuItem>
+              
               <oneLineMenuItem id="HomevideoView" onSelect="atv.loadURL('{{URL(:/::PlexConnect=Settings_HomeVideos)}}')">
                 <label>{{TEXT(Home Video Options)}}</label>
                 <accessories>

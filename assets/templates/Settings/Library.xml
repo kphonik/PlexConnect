@@ -14,12 +14,12 @@
               'template'     : "plex",\
               'title'        : "{{EVAL(quote_plus("{{TEXT(Settings)}}"))}}",\
               'subtitle'     : "{{EVAL(quote_plus("{{TEXT(Library Options)}}"))}}",\
-              'image'        : "backgrounds/plex{{VAL($menubackground::Grey=default|Plex Orange=orange|Apple Blue=blue|Green=green)}}.png",\
+              'image'        : "backgrounds/plex{{VAL($menubackground::Default=default|Grey=grey|Plex Orange=orange|Apple Blue=blue|Green=green)}}.png",\
               'resolution'   : "{{VAL(^aTVScreenResolution)}}",\
               'font'         : "fonts/OpenSans/OpenSans-Light.ttf",\
               'titleColor'   : "{{VAL($titlecolor::White=fafafa|Grey=878787|Plex Orange=ff8800|Apple Blue=1357d4)}}",\
               'subtitleColor' : "{{VAL($subtitlecolor::White=fafafa|Grey=878787|Plex Orange=ff8800|Apple Blue=1357d4)}}",\
-              'layers'       : ["PlexSubList{{VAL($listtint::On=Text|Off=)}}"{{VAL($menuhint::On=,"PlexPressMenu_{{VAL($subtitlecolor::White=white|Plex Orange=orange|Apple Blue=blue|Grey=grey)}}"|Off=)}}]\
+              'layers'       : ["PlexSubList{{VAL($listtint::On=Text|Off=)}}"]\
             })}})}})}}
           </image>
         </imageHeader>
@@ -70,54 +70,63 @@
               <oneLineMenuItem id="SectionIcons" onSelect="toggleSettings('SectionIcons', 'Settings_Library')">
                 <label>{{TEXT(Library Icons)}}</label>
                 <rightLabel>{{SETTING(sectionicons)}}</rightLabel>
-              </oneLineMenuItem>             
+              </oneLineMenuItem>
+              <oneLineMenuItem id="LibraryFanart" onSelect="toggleSettings('LibraryFanart', 'Settings_Library')">
+                <label>{{TEXT(Library Fanart)}}</label>
+                <rightLabel>{{SETTING(libraryfanart)}}</rightLabel>
+              </oneLineMenuItem>
               </items>
               </menuSection>
               
               <menuSection>
              <header>
               <horizontalDivider alignment="left">
-                <title>{{TEXT(Shared Library)}}</title>
+                <title>{{TEXT(Shared Libraries)}}</title>
               </horizontalDivider>
             </header>
             <items>
-                <oneLineMenuItem id="LibraryView_Remote" onSelect="toggleSettings('LibraryView_Remote', 'Settings_Library')">
-                <label>{{TEXT(Library View)}}</label>
-                <rightLabel>{{SETTING(libraryview_remote)}}</rightLabel>
+                <oneLineMenuItem id="SharedLibrariesView" onSelect="toggleSettings('SharedLibrariesView', 'Settings_Library')">
+                <label>{{TEXT(Shared Libraries View)}}</label>
+                <rightLabel>{{SETTING(sharedlibrariesview)}}</rightLabel>
               </oneLineMenuItem>
-              <oneLineMenuItem id="SectionIcons_Shared" onSelect="toggleSettings('SectionIcons_Shared', 'Settings_Library')">
-                <label>{{TEXT(Library Icons)}}</label>
-                <rightLabel>{{SETTING(sectionicons_shared)}}</rightLabel>
-              </oneLineMenuItem> 
-              <!--<oneLineMenuItem id="LibraryRemote_Search" onSelect="toggleSettings('LibraryRemote_Search', 'Settings/Library')">
-                <label>{{TEXT(Search Section)}}</label>
-                <rightLabel>{{SETTING(libraryremote_search)}}</rightLabel>
-              </oneLineMenuItem>-->
+              <oneLineMenuItem id="Shared_SectionIcons" onSelect="toggleSettings('Shared_SectionIcons', 'Settings_Library')">
+                <label>{{TEXT(Shared Libraries Icons)}}</label>
+                <rightLabel>{{SETTING(shared_sectionicons)}}</rightLabel>
+              </oneLineMenuItem>
                </items>
               </menuSection>
               
               <menuSection>
-                  <header>
-                      <horizontalDivider alignment="left">
-                          <title>{{TEXT(All Libraries)}}</title>
-                      </horizontalDivider>
-                  </header>
-                  <items>
-                      <oneLineMenuItem id="LibrariesView" onSelect="toggleSettings('LibrariesView', 'Settings_Library')">
-                  <label>{{TEXT(All Libraries View)}}</label>
-                  <rightLabel>{{SETTING(librariesview)}}</rightLabel>
+           <header>
+              <horizontalDivider alignment="left">
+                <title>{{TEXT(PlayLists)}}</title>
+              </horizontalDivider>
+            </header>
+            <items>
+            <oneLineMenuItem id="PlayListsView" onSelect="toggleSettings('PlayListsView', 'Settings_PlayList')">
+                <label>{{TEXT(Playlists View)}}</label>
+                <rightLabel>{{SETTING(playlistsview)}}</rightLabel>
+              </oneLineMenuItem>   
+            </items>
+          </menuSection>
+          <menuSection>
+           <header>
+              <horizontalDivider alignment="left">
+                <title>{{TEXT(Channels)}}</title>
+              </horizontalDivider>
+            </header>
+            <items>
+            <oneLineMenuItem id="ChannelView" onSelect="toggleSettings('ChannelView', 'Settings_Channels')">
+                <label>{{TEXT(Channels View)}}</label>
+                <rightLabel>{{SETTING(channelview)}}</rightLabel>
+              </oneLineMenuItem>   
+              <oneLineMenuItem id="ShowTitles_Channels" onSelect="toggleSettings('ShowTitles_Channels', 'Settings_Channels')">
+                <label>{{TEXT(Channel Titles)}}</label>
+                <rightLabel>{{SETTING(showtitles_channels)}}</rightLabel>
               </oneLineMenuItem>
-              <oneLineMenuItem id="SectionIcons_Merge" onSelect="toggleSettings('SectionIcons_Merge', 'Settings_Library')">
-                <label>{{TEXT(All Libraries Icons)}}</label>
-                <rightLabel>{{SETTING(sectionicons_shared)}}</rightLabel>
-              </oneLineMenuItem>
-                  </items>
-              </menuSection>
-              
-              
-              
-        
-             
+            </items>
+          </menuSection>
+                  
               <menuSection>
            <header>
               <horizontalDivider alignment="left">
@@ -132,9 +141,7 @@
               <oneLineMenuItem id="ShowTitles_Library" onSelect="toggleSettings('ShowTitles_Library', 'Settings_Library')">
                 <label>{{TEXT(Poster Titles)}}</label>
                 <rightLabel>{{SETTING(showtitles_library)}}</rightLabel>
-              </oneLineMenuItem> 
-              
-                         
+              </oneLineMenuItem>                      
             </items>
           </menuSection>
 
@@ -145,13 +152,6 @@
               </horizontalDivider>
             </header>
             <items>
-            
-            <oneLineMenuItem id="Library_Merge" onSelect="toggleSettings('Library_Merge', 'Settings_Library')">
-                <label>{{TEXT(Merge All Libaries)}}</label>
-                <accessories>
-                  <checkMark/>
-                </accessories>{{CUT($library_merge::unchecked=CUT|checked=)}}
-              </oneLineMenuItem> 
 
               <oneLineMenuItem id="Library_OnDeck" onSelect="toggleSettings('Library_OnDeck', 'Settings_Library')">
                 <label>{{TEXT(On Deck)}}</label>
@@ -165,15 +165,35 @@
                 <accessories>
                   <checkMark/>
                 </accessories>{{CUT($library_recentlyadded::unchecked=CUT|checked=)}}
-              </oneLineMenuItem>               
-              <oneLineMenuItem id="Library_Channels" onSelect="toggleSettings('Library_Channels', 'Settings_Library')">
-                <label>{{TEXT(Channels)}}</label>
-                <accessories>
-                  <checkMark/>
-                </accessories>{{CUT($library_channels::unchecked=CUT|checked=)}}
               </oneLineMenuItem>              
             </items>
           </menuSection>
+          
+          <menuSection>
+            <header>
+              <horizontalDivider alignment="left">
+                <title>{{TEXT(Shared Libraries Extras)}}</title>
+              </horizontalDivider>
+            </header>
+            <items>
+
+              <oneLineMenuItem id="SharedLibrary_OnDeck" onSelect="toggleSettings('SharedLibrary_OnDeck', 'Settings_Library')">
+                <label>{{TEXT(On Deck)}}</label>
+                <accessories>
+                  <checkMark/>
+                </accessories>{{CUT($sharedlibrary_ondeck::unchecked=CUT|checked=)}}
+              </oneLineMenuItem>
+
+              <oneLineMenuItem id="SharedLibrary_RecentlyAdded" onSelect="toggleSettings('SharedLibrary_RecentlyAdded', 'Settings_Library')">
+                <label>{{TEXT(Recently Added)}}</label>
+                <accessories>
+                  <checkMark/>
+                </accessories>{{CUT($sharedlibrary_recentlyadded::unchecked=CUT|checked=)}}
+              </oneLineMenuItem>                    
+            </items>
+          </menuSection>
+          
+          
         </sections>
       </menu>
     </itemCollectionWithImageHeader>

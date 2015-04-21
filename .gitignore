@@ -32,21 +32,18 @@ assets/templates/MoviePrePlay_Fanart.xml
 assets/templates/EpisodePrePlay_Fanart.xml
 
 
-assets/fanartcache/*.png
-
 assets/templates/TVShow/DetailedList.xml
 
 assets/templates/TVShow/Episode_List_Fanart.xml
 
 assets/templates/TVShow/Episode_List.xml
 
-assets/templates/Channels/View.xml
 
 assets/templates/TVShow/Season_Coverflow_Fanart.xml
 
 assets/templates/TVShow/Season_List_Fanart.xml
 
-assets/fanartcache/tmp.png
+
 
 assets/templates/TVShow/Season_Coverflow_Fanart.xml
 
@@ -59,3 +56,33 @@ assets/templates/TVShow/Episode_List_Fanart.xml
 assets/templates/TVShow/Season_Coverflow_Fanart.xml
 
 assets/templates/TVShow/Season_List_Fanart.xml
+
+assets/templates/Library/Bookcase.xml
+
+assets/templates/Library/Grid.xml
+
+assets/templates/Library/List.xml
+
+assets/templates/Library/Bookcase.xml
+
+assets/templates/Library/Grid.xml
+
+assets/templates/Movie/PrePlay_Fanart.xml
+
+assets/templates/Movie/PrePlay.xml
+
+assets/templates/TVShow/Episode_List_Fanart.xml
+
+assets/templates/TVShow/PrePlay_Fanart.xml
+
+assets/templates/TVShow/Episode_List_Fanart.xml
+
+assets/templates/TVShow/Season_List_Fanart.xml
+
+assets/templates/TVShow/Season_Coverflow_Fanart.xml
+
+assets/templates/TVShow/Episode_List_Fanart.xml
+
+assets/templates/Settings/TopLevel.xml
+
+assets/templates/Movie/PrePlay_Fanart.xml

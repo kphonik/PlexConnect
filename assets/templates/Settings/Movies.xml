@@ -14,12 +14,12 @@
               'template'     : "plex",\
               'title'        : "{{EVAL(quote_plus("{{TEXT(Settings)}}"))}}",\
               'subtitle'     : "{{EVAL(quote_plus("{{TEXT(Movie Options)}}"))}}",\
-              'image'        : "backgrounds/plex{{VAL($menubackground::Grey=default|Plex Orange=orange|Apple Blue=blue|Green=green)}}.png",\
+              'image'        : "backgrounds/plex{{VAL($menubackground::Default=default|Grey=grey|Plex Orange=orange|Apple Blue=blue|Green=green)}}.png",\
               'resolution'   : "{{VAL(^aTVScreenResolution)}}",\
               'font'         : "fonts/OpenSans/OpenSans-Light.ttf",\
               'titleColor'   : "{{VAL($titlecolor::White=fafafa|Grey=878787|Plex Orange=ff8800|Apple Blue=1357d4)}}",\
               'subtitleColor' : "{{VAL($subtitlecolor::White=fafafa|Grey=878787|Plex Orange=ff8800|Apple Blue=1357d4)}}",\
-              'layers'       : ["PlexSubList{{VAL($listtint::On=Text|Off=)}}"{{VAL($menuhint::On=,"PlexPressMenu_{{VAL($subtitlecolor::White=white|Plex Orange=orange|Apple Blue=blue|Grey=grey)}}"|Off=)}}]\
+              'layers'       : ["PlexSubList{{VAL($listtint::On=Text|Off=)}}"]\
             })}})}})}}
           </image>
         </imageHeader>
@@ -80,32 +80,18 @@
           
           
             <items>
-              <oneLineMenuItem id="MovieExtras" onSelect="toggleSettings('MovieExtras', 'Settings_Movies')">
-                <label>{{TEXT(Movie Extras)}}</label>
-                <rightLabel>{{SETTING(movieextras)}}</rightLabel>
+              <oneLineMenuItem id="MoviePrePlay_BottomShelf" onSelect="toggleSettings('MoviePrePlay_BottomShelf', 'Settings_Movies')">
+                <label>{{TEXT(PrePlay Bottom Shelf)}}</label>
+                <rightLabel>{{SETTING(moviepreplay_bottomshelf)}}</rightLabel>
               </oneLineMenuItem>
-            </items>
+              
+              <oneLineMenuItem id="MoviePrePlay_Settings" onSelect="toggleSettings('MoviePrePlay_Settings', 'Settings_Movies')">
+                <label>{{TEXT(PrePlay Settings Button)}}</label>
+                <rightLabel>{{SETTING(moviepreplay_settings)}}</rightLabel>
+              </oneLineMenuItem>
+              </items>
           </menuSection>
           
-          <menuSection>
-            <header>
-              <horizontalDivider alignment="left">
-                <title>{{TEXT(Movie PrePlay)}}</title>
-              </horizontalDivider>
-            </header>
-          
-          
-            <items>
-              <oneLineMenuItem id="MovieLayers" onSelect="toggleSettings('MovieLayers', 'Settings_Movies')">
-                <label>{{TEXT(Movie Layer)}}</label>
-                <rightLabel>{{SETTING(movielayers)}}</rightLabel>
-              </oneLineMenuItem>
-              <oneLineMenuItem id="MoviePosters" onSelect="toggleSettings('MoviePosters', 'Settings_Movies')">
-                <label>{{TEXT(Movie Poster)}}</label>
-                <rightLabel>{{SETTING(movieposters)}}</rightLabel>
-              </oneLineMenuItem>
-            </items>
-          </menuSection>
 
           <menuSection>
             <header>

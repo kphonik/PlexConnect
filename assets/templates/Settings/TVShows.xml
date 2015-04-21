@@ -14,12 +14,12 @@
               'template'     : "plex",\
               'title'        : "{{EVAL(quote_plus("{{TEXT(Settings)}}"))}}",\
               'subtitle'     : "{{EVAL(quote_plus("{{TEXT(TV Show Options)}}"))}}",\
-              'image'        : "backgrounds/plex{{VAL($menubackground::Grey=default|Plex Orange=orange|Apple Blue=blue|Green=green)}}.png",\
+              'image'        : "backgrounds/plex{{VAL($menubackground::Default=default|Grey=grey|Plex Orange=orange|Apple Blue=blue|Green=green)}}.png",\
               'resolution'   : "{{VAL(^aTVScreenResolution)}}",\
               'font'         : "fonts/OpenSans/OpenSans-Light.ttf",\
               'titleColor'   : "{{VAL($titlecolor::White=fafafa|Grey=878787|Plex Orange=ff8800|Apple Blue=1357d4)}}",\
               'subtitleColor' : "{{VAL($subtitlecolor::White=fafafa|Grey=878787|Plex Orange=ff8800|Apple Blue=1357d4)}}",\
-              'layers'       : ["PlexSubList{{VAL($listtint::On=Text|Off=)}}"{{VAL($menuhint::On=,"PlexPressMenu_{{VAL($subtitlecolor::White=white|Plex Orange=orange|Apple Blue=blue|Grey=grey)}}"|Off=)}}]\
+              'layers'       : ["PlexSubList{{VAL($listtint::On=Text|Off=)}}"]\
             })}})}})}}
           </image>
         </imageHeader>
@@ -87,41 +87,18 @@
           <menuSection>
             <header>
               <horizontalDivider alignment="left">
-                <title>{{TEXT(Episode PrePlay)}}</title>
+                <title>{{TEXT(TVShow Extras)}}</title>
               </horizontalDivider>
-            </header>
+            </header>       
           
-          
-            <items>
-              <oneLineMenuItem id="ShowLayers" onSelect="toggleSettings('ShowLayers', 'Settings_TVShows')">
-                <label>{{TEXT(PrePlay Layer)}}</label>
-                <rightLabel>{{SETTING(showlayers)}}</rightLabel>
+            <items>         
+              <oneLineMenuItem id="ShowPrePlay_Settings" onSelect="toggleSettings('ShowPrePlay_Settings', 'Settings_TVShows')">
+                <label>{{TEXT(PrePlay Settings Button)}}</label>
+                <rightLabel>{{SETTING(showpreplay_settings)}}</rightLabel>
               </oneLineMenuItem>
-              <oneLineMenuItem id="EpisodePosters" onSelect="toggleSettings('EpisodePosters', 'Settings_TVShows')">
-                <label>{{TEXT(PrePlay Poster)}}</label>
-                <rightLabel>{{SETTING(episodeposters)}}</rightLabel>
-              </oneLineMenuItem>
-            </items>
+              </items>
           </menuSection>
           
-          <menuSection>
-            <header>
-              <horizontalDivider alignment="left">
-                <title>{{TEXT(Section Layers)}}</title>
-              </horizontalDivider>
-            </header>
-                 
-            <items>
-              <oneLineMenuItem id="EpisodeLayers" onSelect="toggleSettings('EpisodeLayers', 'Settings_TVShows')">
-                <label>{{TEXT(Episode Layer)}}</label>
-                <rightLabel>{{SETTING(episodelayers)}}</rightLabel>
-              </oneLineMenuItem>
-              <oneLineMenuItem id="SeasonLayers" onSelect="toggleSettings('SeasonLayers', 'Settings_TVShows')">
-                <label>{{TEXT(Season Layer)}}</label>
-                <rightLabel>{{SETTING(seasonlayers)}}</rightLabel>
-              </oneLineMenuItem>
-            </items>
-          </menuSection>
 
           <menuSection>
             <header>

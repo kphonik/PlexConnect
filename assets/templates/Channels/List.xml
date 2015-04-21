@@ -16,13 +16,13 @@
         <imageHeader>
 	      <image insets="0, 0, {{VAL(^aTVScreenResolution:1:720=552|1080=828)}}, 0" required="true">
           {{URL(:/fanartcache/{{getBackground({{EVAL({\
-          'template'    : 'plex',\
+          'template'    : 'Plex',\
           'title'       : "{{EVAL(quote_plus("{{TEXT(Plex Channels)}}"))}}",\
-          'image'       : "backgrounds/plex{{VAL($menubackground::Grey=default|Plex Orange=orange|Apple Blue=blue|Green=green)}}.png",\
+          'image'       : "backgrounds/plex{{VAL($menubackground::Default=default|Grey=grey|Plex Orange=orange|Apple Blue=blue|Green=green)}}.png",\
           'resolution'  : "{{VAL(^aTVScreenResolution)}}",\
           'font'        : "fonts/OpenSans/OpenSans-Light.ttf",\
           'titleColor'  : "{{VAL($titlecolor::White=fafafa|Grey=878787|Plex Orange=ff8800|Apple Blue=1357d4)}}",\
-          'layers'      : ["PlexList{{VAL($paradelisttint::On=Text|Off=)}}"{{VAL($menuhint::On=,"PlexPressMenu_{{VAL($subtitlecolor::White=white|Plex Orange=orange|Apple Blue=blue|Grey=grey)}}"|Off=)}}]\
+          'layers'      : ["PlexList{{VAL($paradelisttint::On=Text|Off=)}}"]\
           })}})}})}}
 	      </image>
         </imageHeader>

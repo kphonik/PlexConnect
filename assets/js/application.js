@@ -351,17 +351,19 @@ if( atv.Element ) {
 }
 
 
+var statePause = 0;
+
 /*
  * Handle showing/hiding of transport controls
  */
 atv.player.onTransportControlsDisplayed = function(animationDuration)
 {
-    
+    showOverlays(0);
 };
 
 atv.player.onTransportControlsHidden = function(animationDuration)
 {
-  
+    if (statePause == 0)  hideOverlays(0);
 };
 
 
@@ -418,11 +420,14 @@ atv.player.playerStateChanged = function(newState, timeIntervalSec) {
   {
     state = 'paused';
     if (isTranscoding)
-        {
-            pingTimer = atv.setInterval(
-            function() { loadPage( baseURL + '/video/:/transcode/universal/ping?session=' + atv.device.udid); },60000);
-          }
-    showOverlays(0.5);
+    {
+      pingTimer = atv.setInterval(
+        function() { loadPage( baseURL + '/video/:/transcode/universal/ping?session=' + atv.device.udid); },
+        60000
+      );
+    }
+      showOverlays(0.5);
+      statePause = 1;
   }
 
   // Playing state, kill paused state ping timer
@@ -430,8 +435,7 @@ atv.player.playerStateChanged = function(newState, timeIntervalSec) {
   {
     state = 'play'
     atv.clearInterval(pingTimer);
-      hideOverlays(0.5);
-
+      statePause = 0;
   }
 
   // Loading state, tell PMS we're buffering

@@ -10,7 +10,7 @@
         <imageHeader>
            <image insets="0, 0, {{VAL(^aTVScreenResolution:1:720=590|1080=800)}}, 0" required="true">
            {{URL(:/fanartcache/{{getBackground({{EVAL({\
-              'template' : 'plex',\
+              'template' : 'Plex',\
               'title'       : "{{EVAL(quote_plus("{{VAL(title1)}}"))}}",\
               'subtitle'    : "{{EVAL(quote_plus("{{VAL(title2)}}"))}}",\
               'image'       : "{{IMAGEURL(art:::)}}",\
@@ -19,16 +19,9 @@
               'titleColor'  : "{{VAL($titlecolor::White=fafafa|Grey=878787|Plex Orange=ff8800|Apple Blue=1357d4)}}",\
               'subtitleColor': "{{VAL($subtitlecolor::White=fafafa|Grey=878787|Plex Orange=ff8800|Apple Blue=1357d4)}}",\
               'imageBlur'   : "{{VAL($fanartblur::1=1|2=2|3=3|0=)}}",\
-              'layers'      : ["PlexSubGrid{{VAL($fanarttint::On=Text|Off=)}}"{{VAL($menuhint::On=,"PlexPressMenu_{{VAL($subtitlecolor::White=white|Plex Orange=orange|Apple Blue=blue|Grey=grey)}}"|Off=)}}]\
+              'layers'      : ["PlexSubGrid{{VAL($fanarttint::On=Text|Off=)}}"]\
               })}})}})}}
-              </image>{{CUT($episodelayers::Hide=CUT|Show=)}}
-          <image insets="0, 0, {{VAL(^aTVScreenResolution:1:720=550|1080=800)}}, 0" required="true">
-          {{URL(:/fanartcache/{{getBackground({{EVAL({\
-              
-              'image'       : "{{IMAGEURL(art:::)}}",\
-              'resolution'  : "{{VAL(^aTVScreenResolution)}}"\
-              })}})}})}}
-          </image>{{CUT($episodelayers::Hide=|Show=Hide)}}
+              </image>
         </imageHeader>
       </header>
       
@@ -38,7 +31,7 @@
             <fourByThreePoster id="{{VAL(key)}}" featured="true" alwaysShowTitles="true"
                              onPlay="atv.loadURL('{{URL(:::PlexConnect=Play_Video&amp;PlexConnectRatingKey={{VAL(ratingKey)}}&amp;PlexConnectPlayType=Continuous)}}')"
                                          onSelect="atv.loadURL('{{URL(key:::PlexConnect=TVShow_PrePlay)}}')"
-                                         onHoldSelect="scrobbleMenu('{{URL(key:::PlexConnect=Scrobble_MenuVideo)}}')">
+                                         onHoldSelect="scrobbleMenu('{{URL(key:::PlexConnect=Scrobble_MenuTVOnDeck)}}')">
                  {{COPY(Video)}}
                  <title>{{VAL(index)}}. {{VAL(title)}}</title>
                  
