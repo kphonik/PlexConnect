@@ -327,9 +327,6 @@ def XML_PMS2aTV(PMS_address, path, options):
         dprint(__name__, 1, 'purging: {0}', "Fanart Cache")  # Debug  
         path = ''  # clear path - we don't need PMS-XML   
 
-    # Special case path requests
-    if path.startswith('/search?'):
-        XMLtemplate = 'Search/Results.xml'
         
     elif path.find('serviceSearch') != -1 or (path.find('video') != -1 and path.lower().find('search') != -1):
         XMLtemplate = 'Channels/VideoSearchResults.xml'
